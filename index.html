@@ -1,0 +1,3474 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Martha's Good & Lovely</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<div class="page-shell">
+<header class="site-header" id="top">
+    <div class="header-inner">
+        <img src="Logo.png" alt="Martha's Good & Lovely logo">
+        <p class="site-tagline">Etablert 2007</p>
+        <h1 class="site-title">Martha's Good & Lovely</h1>
+    </div>
+</header>
+
+<nav class="site-nav" aria-label="Hovednavigasjon">
+    <a href="#top">Hjem</a>
+    <a href="#onTap">På tap</a>
+    <a href="#beers">Øl</a>
+    <a href="#about">Om bryggeriet</a>
+</nav>
+
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-copy">
+            <p class="hero-kicker">Hjemmebryggeri</p>
+            <h2>Håndbrygget øl med karakter og kvalitet. </p>Med en tydelig uhøytidlig bryggeriprofil.</h2>
+            <p>Et personlig arkiv over oppskrifter, etiketter og bryggehistorie, bygget rundt kvalitet, nysgjerrighet og lysten til å lage noe som smaker godt.</p>
+            <div class="hero-actions">
+                <a class="hero-link primary" href="#beers">Utforsk ølarkivet</a>
+                <a class="hero-link secondary" href="#about">Les historien</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="onTap" class="content-section alt">
+    <div class="section-shell">
+        <div class="section-header">
+            <p class="section-label">Nå</p>
+            <h2>På tap</h2>
+            <p>Dette er ølene som er tilgjengelige akkurat nå.</p>
+        </div>
+        <div class="beer-grid" id="onTapGrid"></div>
+    </div>
+</section>
+
+<section id="beers" class="content-section">
+    <div class="section-shell">
+        <div class="section-header">
+            <p class="section-label">Arkiv</p>
+            <h2>Bryggeriets øl</h2>
+            <p>Et voksende arkiv av brygg, etiketter, smaksnotater og historikk. Søk, sorter og klikk deg videre inn i hvert enkelt øl.</p>
+        </div>
+
+        <div class="toolbar">
+            <p class="toolbar-intro">Filtrer på stil, sorter etter år eller styrke, og bruk modalen for å lese mer om hvert brygg.</p>
+
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Søk etter øl eller stil..."
+                aria-label="Søk etter øl eller stil"
+            >
+
+            <div id="styleFilter" class="style-filters"></div>
+
+            <div id="sortControls" class="sort-controls"></div>
+            <div id="activeFilters" class="active-filters"></div>
+        </div>
+
+        <h3 class="archive-tagline">Lovely for the Good</h3>
+        <div class="beer-grid" id="beerGrid"></div>
+    </div>
+</section>
+
+<section id="about" class="content-section">
+    <div class="section-shell">
+        <div class="section-header">
+            <p class="section-label">Historie</p>
+            <h2>Om bryggeriet</h2>
+            <p>Fra de første forsøkene i Trondheim til et mer modent bryggeri med egne etiketter, tydelig identitet og ønsket om å servere godt øl til folk i nærheten.</p>
+        </div>
+
+        <div class="about-panel">
+            <div class="about-layout">
+
+        <!-- TEKST -->
+        <div class="about-text">
+
+            <p>Helt fra starten har bryggingen – og identiteten til hvert enkelt øl – stått sentralt i bryggeriet. Det legges stor stolthet i å utvikle en unik visuell profil for hvert brygg. Som et barn av 90-tallet bærer både navnet og designet preg av en viss ironi og tørr humor, noe som ble tydelig etablert da navn og logo ble utformet i 2012.</p>
+
+<p>Martha’s Good & Lovely startet som et hjemmebryggeri i 2007, da bryggemester Martin Skei var student og bodde i en toppleilighet på Bakklandet ved Nidelven i Trondheim. En gammel glassballong funnet hjemme hos foreldrene vekket ideen om å brygge eget øl. Dette var før hjemmebrygging virkelig tok av i Norge, og tilgangen på råvarer var begrenset.</p>
+
+<p>De første bryggene ble laget fra ølsett med maltsirup, ferdig tilsatt humle og medfølgende gjær av varierende kvalitet. Utstyret ble kjøpt i en generisk vin- og barbutikk med et noe broket utvalg. Resultatene var likevel gode nok til å gi mersmak, og interessen for bedre kvalitet og flere smaksopplevelser vokste raskt.</p>
+
+<p>Norbrygg-forumet ble tidlig en viktig kunnskapskilde, og særlig bidragene fra Gahr Smith-Gahrsen gjorde inntrykk. Samtidig ble Brewing-TV en stor inspirasjon, og alle episodene ble nærmest studert i detalj.</p>
+
+<p>Jakten på bedre råvarer førte først til Petit Agentur, og senere til Bryggselv, som dukket opp rundt 2009. I årene som fulgte skjøt craft beer-bølgen fart i Norge, og tilgangen på både råvarer og utstyr ble dramatisk forbedret.</p>
+
+<p>I 2010 flyttet bryggeriet til Oslo, hvor nærheten til Bryggselvs lokaler gjorde hobbyen enda mer tilgjengelig. Bryggeriet har siden hatt tilhold flere steder i byen – blant annet på St. Hanshaugen, Iladalen, Grünerløkka, Tøyen og Oppsal. I skrivende stund er bryggeriet på vei tilbake til Trondheim, nærmere bestemt Schøningsdalen, med mål om å etablere en mer permanent base.</p>
+
+<p>Eksperimentering har vært en rød tråd gjennom hele historien, men i dag er fokuset i større grad rettet mot stabile, gjennomarbeidede oppskrifter og høy kvalitet – med mål om å servere godt øl til venner og naboer. Samtidig ligger det alltid en mulighet for nye eksperimenter i fremtiden.</p>
+
+<h3>Utstyr</h3>
+
+<p>Bryggeriet startet med en enkel, tynnbunnet kjele til oppvarming av vann og maltsirup, samt gjæringskar i form av glassballong og etter hvert plastspann.</p>
+
+<p>Etter flyttingen til Oslo ble det tatt i bruk et BIAB-oppsett (Brew In A Bag), bestående av en tykkbunnet kjele, induksjonstopp og meskepose, i tillegg til gjæringskar.</p>
+
+<p>I 2017 ble utstyret oppgradert til et «alt-i-ett»-system: Speidel Braumeister 20L Plus. Senere har bryggeriet også tatt i bruk en Ss Brewtech Brewbucket i rustfritt stål, en Fermzilla 27L Tri-Conical for trykkgjæring, samt en Ferminator for presis temperaturkontroll under gjæring.</p>
+
+<p>Ved siste flytting i Oslo, rundt 2020/2021, gikk bryggeriet bort fra flasking og over til servering fra fat. Et Kegerator X øleskap med fire tappekraner ble installert i en bod under trappen ved kjøkkenet, og har siden vært sentralt i serveringen.</p>
+
+        </div>
+
+        <!-- BILDER -->
+        <div class="about-images">
+            <img src="Images/Glassballong.jpeg" alt="Glassballong fra tidlig bryggeperiode">
+            <img src="Images/BryggOslo.jpeg" alt="Brygging i Oslo">
+            <img src="Images/BIAB.jpeg" alt="BIAB-oppsett">
+            <img src="Images/Braumeister.jpeg" alt="Speidel Braumeister bryggeanlegg">
+        </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal" id="beerModal">
+    <div class="modal-content">
+    <button class="close" id="closeModalBtn" type="button" aria-label="Lukk modal">×</button>
+
+    <div class="modal-layout">
+
+        <!-- VENSTRE: bilde -->
+        <div class="modal-image">
+            <img id="modalImage" alt="">
+            <div class="beer-photo-gallery" id="beerPhotoGallery"></div>
+        </div>
+
+        <!-- HØYRE: info -->
+        <div class="modal-info">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
+            <div id="modalDetails"></div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+<footer class="site-footer">
+    <p>© 2026 Martha's Good & Lovely</p>
+</footer>
+</div>
+
+<script>
+const beers = [
+{ name: "TCJB (Tiger City Jungle Brew)", year: 2012, style: "Ukjent",
+    story: "Dette var det første ølet som fikk egen etikett, og etiketten ble til logoen til bryggeriet - kun med noen små endringer."
+ },
+
+{ name: "Skeisen Weiss Wisswass Weizen-Wasser", 
+    year: 2013, 
+    style: "Weizen/Weissbier", 
+    abv: "5.6%",
+    ibu: 12,
+    ebc: 7.7,
+    og: 1.055,
+    fg: 1.012,
+
+    notes: "Myk, kremet og med god munnfølelse. Mye men frisk, fersk hvetesmak og fruktig, kløveraktig smak fra gjærstammen som også gir passe banan, men ikke for mye.",
+    story: "Bryggeriets første hveteøl, og denne har blitt brygget mange ganger, spesielt med tanke på at det stort sett har blitt brygget nye typer de fleste gangene. Den er tross alt en nokså klassisk oppskrift, og dersom det er dette man vil ha så er det ikke så mange andre måter MGL vil gjøre det på.",
+    ingredients: `
+<h4>MGL Skeisn Weiss Wisswass Weizen-Wasser</h4>
+<p><strong>Weizen / Weissbier</strong></p>
+<p>5.6% / 13.5 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (70% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 20 L | Koketid: 75 min</p>
+<p>Mash: 13.91 L | Sparge: 17.09 L | Totalt vann: 31 L</p>
+<p>Pre-boil volum: 28 L | SG: 1.043</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.055 | FG: 1.012 | IBU: 12 | BU/GU: 0.23 | EBC: 7.7</p>
+
+<h4>Mash</h4>
+<ul>
+<li>43 °C – 10 min</li>
+<li>51 °C – 20 min</li>
+<li>67 °C – 50 min</li>
+<li>78 °C – 5 min (mash-out)</li>
+</ul>
+
+<h4>Malts (5.15 kg)</h4>
+<ul>
+<li>Hvetemalt – 2.3 kg (44.7%)</li>
+<li>Pilsnermalt – 2.3 kg (44.7%)</li>
+<li>Flaket havre – 350 g (6.8%)</li>
+<li>Risskall – 200 g (3.9%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Hallertauer Mittelfrüh – 17 g (60 min, 12 IBU)</li>
+</ul>
+
+<h4>Vannjustering</h4>
+<ul>
+<li>CaCl₂ – 2.8 g</li>
+<li>Epsom salt – 0.6 g</li>
+<li>Gypsum – 0.6 g</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP380 Hefeweizen IV</p>
+<p>416.7 ml pitch</p>
+
+<h4>Fermentering</h4>
+<p>17 °C – 14 dager</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Vannprofil</h4>
+<p>Ca: 45 | Mg: 2 | Na: 2 | Cl: 50 | SO₄: 25 | HCO₃: 38</p>
+
+<h4>Notater</h4>
+<p>Risskall brukes for å unngå fastsatt mesk.</p>
+`
+ },
+
+{ name: "Goodliness - Daft Stout",
+    year: 2026,
+    style: "Irish Stout",
+    abv: "4.5%",
+    ibu: 35,
+    ebc: 84.5,
+    og: 1.046,
+    fg: 1.012,
+    onTap: true,
+
+    notes: "Mørk og tørr stout med tydelig kaffeaktig roast fra roasted barley, moderate ristede malttoner og middels til middels høy humlebitterhet.",
+    story: "En klassisk Irish Dry Stout, som er et forsøk på å klone Guinness' klassiker. Oppskriften holder alkoholen moderat, men gir likevel et markant, tørt og lettdrikkelig stoutpreg.",
+    ingredients: `
+<h4>MGL Goodliness - Daft Stoutv2</h4>
+<p><strong>Irish Stout</strong></p>
+<p>4.5% / 11.5 °P</p>
+
+<p><strong>Recipe by:</strong> Martha's Good & Lovely</p>
+<p><strong>Batch type:</strong> All Grain</p>
+<p><strong>System:</strong> Martha the Braumeister 20L (66.73% efficiency)</p>
+
+<h4>Batch</h4>
+<p>Volum: 21 L | Koketid: 60 min</p>
+<p>Mash-vann: 25 L | Sparge-vann: 5.2 L | Totalt vann: 30.2 L</p>
+<p>Boil volum: 26.31 L | Pre-boil gravity: 1.040</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.046 | FG: 1.012 | IBU: 35 | BU/GU: 0.76 | EBC: 84.5</p>
+
+<h4>Mash</h4>
+<ul>
+<li>66 °C – 60 min</li>
+</ul>
+
+<h4>Malts (4.86 kg)</h4>
+<ul>
+<li>Pale Ale Golden Promise – 3.76 kg (77.4%) – 5 EBC</li>
+<li>Flaket bygg – 460 g (9.5%) – 3.3 EBC</li>
+<li>Chocolate Malt – 340 g (7%) – 750 EBC</li>
+<li>Roasted Barley – 300 g (6.2%) – 1400 EBC</li>
+</ul>
+
+<h4>Humle (83.9 g)</h4>
+<ul>
+<li>East Kent Goldings (EKG) 4.7% – 31.4 g (19 IBU) – 60 min</li>
+<li>East Kent Goldings (EKG) 4.7% – 23.9 g (8 IBU) – 20 min</li>
+<li>East Kent Goldings (EKG) 4.7% – 28.6 g (8 IBU) – 15 min</li>
+</ul>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Calcium Chloride (CaCl2) – 4.964 g – Mash</li>
+<li>Epsom Salt (MgSO4) – 3.818 g – Mash</li>
+<li>Gypsum (CaSO4) – 4.964 g – Mash</li>
+<li>Whirlfloc – 0.955 stk – 15 min</li>
+<li>Yeast Nutrients (WLN1000) – 2.386 g – 15 min</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>Lallemand (LalBrew) Nottingham Yeast – 1 pakke (75%)</p>
+<p>Alternative gjæralternativer: Lallemand Windsor eller Lallemand London</p>
+
+<h4>Fermentering</h4>
+<ul>
+<li>Primær – 18 °C – 4 dager</li>
+<li>Primær – 20 °C – 5 dager</li>
+<li>Cold crash – 4 °C – 3 dager</li>
+</ul>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Vannprofil</h4>
+<p>Ca: 103 | Mg: 14 | Na: 2 | Cl: 89 | SO₄: 154 | HCO₃: 38</p>
+
+<h4>Stilbeskrivelse</h4>
+<p>Irish Dry Stout er et mørkt, nesten svart øl med tørr, ristet karakter fra roasted barley. Kaffeaktig roast og moderat preg av mørk malt er sentralt i uttrykket, støttet av en middels til middels høy humlebitterhet.</p>
+`
+ },
+
+{
+    name: "IPA Nema Problema",
+    year: 2013,
+    style: "American IPA",
+
+    abv: "8.1%",
+    ibu: 51,
+    ebc: 16.4,
+    og: 1.082,
+    fg: 1.020,
+
+    notes: "Fyldig og kraftig IPA med tydelig sitruspreg fra Cascade, balansert av en rik maltkropp og moderat bitterhet.",
+
+    story: "Originalversjonen av IPA Nema Problema. En kraftigere og mer maltpreget IPA enn oppfølgeren, med fokus på fylde og balanse fremfor aggressiv bitterhet. Bruken av Burton Ale-gjær gir ekstra kompleksitet og en lett fruktig karakter.",
+
+    ingredients: `
+<h4>MGL IPA Nema Problema</h4>
+<p><strong>American IPA</strong></p>
+<p>8.1% / 19.7 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (75% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 23 L | Koketid: 90 min</p>
+<p>Mash: 22.01 L | Sparge: 11.39 L | Totalt vann: 33.4 L</p>
+<p>Pre-boil volum: 28 L | SG: 1.073</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.082 | FG: 1.020 | IBU: 51 | BU/GU: 0.62 | EBC: 16.4</p>
+
+<h4>Mash</h4>
+<ul>
+<li>51 °C – 10 min</li>
+<li>67 °C – 45 min</li>
+<li>78 °C – 5 min</li>
+</ul>
+
+<h4>Malts (8.15 kg)</h4>
+<ul>
+<li>Maris Otter – 8 kg (98.2%)</li>
+<li>Dark Crystal – 150 g (1.8%)</li>
+</ul>
+
+<h4>Humle (Single hop: Cascade)</h4>
+<ul>
+<li>Cascade – 15 g (60 min, 9 IBU)</li>
+<li>Cascade – 20 g (45 min, 11 IBU)</li>
+<li>Cascade – 30 g (30 min, 14 IBU)</li>
+<li>Cascade – 40 g (15 min, 12 IBU)</li>
+<li>Cascade – 40 g (5 min, 5 IBU)</li>
+<li>Cascade – 40 g (0 min / hopstand)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP023 Burton Ale (72%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 20 °C</p>
+
+<p><strong>Karbonering:</strong> 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<ul>
+<li>Husk blow-off-slange – høy OG gir kraftig gjæring</li>
+<li>Burton-gjær gir mer fruktighet og kompleksitet enn WLP001</li>
+<li>Høy FG gir fyldigere kropp enn oppfølgeren</li>
+</ul>
+`
+},
+
+{
+    name: "IPA Nema Problema II",
+    year: 2013,
+    style: "American IPA",
+
+    abv: "7.0%",
+    ibu: 56,
+    ebc: 13.4,
+    og: 1.068,
+    fg: 1.015,
+
+    notes: "Klassisk amerikansk IPA med tydelig sitruspreg fra Cascade, moderat bitterhet og ren gjærprofil.",
+
+    story: "En videreutvikling av IPA Nema Problema, med fokus på enkelhet og balanse. Ølet er bygget rundt Cascade-humle for å fremheve sitrus, friskhet og klassisk amerikansk IPA-karakter.",
+
+    ingredients: `
+<h4>MGL IPA Nema Problema II</h4>
+<p><strong>American IPA</strong></p>
+<p>7.0% / 16.7 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (75% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 24 L | Koketid: 90 min</p>
+<p>Mash: 19.17 L | Sparge: 13.39 L | Totalt vann: 32.56 L</p>
+<p>Pre-boil volum: 28 L | SG: 1.063</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.068 | FG: 1.015 | IBU: 56 | BU/GU: 0.81 | EBC: 13.4</p>
+
+<h4>Mash</h4>
+<ul>
+<li>51 °C – 25 min</li>
+<li>67 °C – 60 min</li>
+<li>78 °C – 5 min</li>
+</ul>
+
+<h4>Malts (7.1 kg)</h4>
+<ul>
+<li>Maris Otter – 7 kg (98.6%)</li>
+<li>Dark Crystal – 100 g (1.4%)</li>
+</ul>
+
+<h4>Humle (Single hop: Cascade)</h4>
+<ul>
+<li>Cascade – 40 g (60 min, 25 IBU)</li>
+<li>Cascade – 30 g (30 min, 15 IBU)</li>
+<li>Cascade – 35 g (15 min, 11 IBU)</li>
+<li>Cascade – 40 g (5 min, 5 IBU)</li>
+<li>Cascade – 40 g (0 min / hopstand)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP001 California Ale (76.5%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 22 °C</p>
+
+<p><strong>Karbonering:</strong> 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<ul>
+<li>Single-hop IPA med Cascade i alle tilsetninger</li>
+<li>Gir tydelig sitrusprofil (grapefrukt og appelsin)</li>
+<li>Hopstand bidrar til aroma uten ekstra bitterhet</li>
+</ul>
+`
+},
+
+{
+    name: "AleBuzz Humlesnurr",
+    year: 2013,
+    style: "American IPA",
+
+    abv: "6.4%",
+    ibu: 77,
+    ebc: 12.6,
+    og: 1.062,
+    fg: 1.013,
+
+    notes: "Humledrevet IPA med tydelig sitrus og floral karakter, balansert av en lett maltkropp og moderat sødme.",
+
+    story: "En klassisk American IPA med et lite særpreg gjennom bruk av både amerikansk og tysk humle. Ølet kombinerer kraftig bitterhet med aromatiske innslag og en balansert maltbase.",
+
+    ingredients: `
+<h4>MGL AleBuzz Humlesnurr</h4>
+<p><strong>American IPA</strong></p>
+<p>6.4% / 15.1 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (75% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 23 L | Koketid: 90 min</p>
+<p>Mash: 16.63 L | Sparge: 15.18 L | Totalt vann: 31.81 L</p>
+<p>Pre-boil volum: 28 L | SG: 1.055</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.062 | FG: 1.013 | IBU: 77 | BU/GU: 1.25 | EBC: 12.6</p>
+
+<h4>Mash</h4>
+<ul>
+<li>66 °C – 80 min</li>
+<li>78 °C – 10 min</li>
+</ul>
+
+<h4>Malts (6.16 kg)</h4>
+<ul>
+<li>Maris Otter – 5.7 kg (92.5%)</li>
+<li>Munich (mørk) – 360 g (5.8%)</li>
+<li>Dark Crystal – 50 g (0.8%)</li>
+<li>Melanoidin – 50 g (0.8%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Centennial – 40 g (70 min, 42 IBU)</li>
+<li>Amarillo – 19.9 g (45 min, 20 IBU)</li>
+<li>Hallertau Mittelfrüh – 49.7 g (15 min, 11 IBU)</li>
+<li>Hallertau Mittelfrüh – 49.8 g (5 min, 4 IBU)</li>
+<li>Cascade – 49.7 g (tørrhumling)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP001 California Ale (76.5%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 19 °C</p>
+
+<p><strong>Karbonering:</strong> 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<ul>
+<li>Kraftig bitterprofil med BU/GU på 1.25</li>
+<li>Kombinasjon av amerikansk og tysk humle gir både sitrus og floral karakter</li>
+<li>Tørrhumling gir ekstra aroma uten å øke bitterheten</li>
+</ul>
+`
+},
+
+{
+    name: "Skei Kölsch",
+    year: 2013,
+    style: "Kölsch",
+
+    abv: "6.3%",
+    ibu: 32,
+    ebc: 7.5,
+    og: 1.062,
+    fg: 1.014,
+
+    notes: "Lys, frisk og balansert Kölsch med lett fruktighet, mild maltprofil og subtil humlebitterhet.",
+
+    story: "Et forsøk på å brygge en klassisk Kölsch med et lite løft i styrke. Ølet balanserer ren gjærprofil med lett fruktighet og en forsiktig humlekarakter, samtidig som det beholder den elegante og lettdrikkelige stilen.",
+
+    ingredients: `
+<h4>MGL Skei Kölsch</h4>
+<p><strong>Kölsch</strong></p>
+<p>6.3% / 15.2 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (75% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 23 L | Koketid: 90 min</p>
+<p>Mash: 16.2 L | Sparge: 15.48 L | Totalt vann: 31.68 L</p>
+<p>Pre-boil volum: 28 L | SG: 1.055</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.062 | FG: 1.014 | IBU: 32 | BU/GU: 0.52 | EBC: 7.5</p>
+
+<h4>Mash</h4>
+<ul>
+<li>51 °C – 25 min</li>
+<li>67 °C – 60 min</li>
+<li>78 °C – 5 min</li>
+</ul>
+
+<h4>Malts (6 kg)</h4>
+<ul>
+<li>Pilsnermalt – 4.8 kg (80%)</li>
+<li>Vienna – 700 g (11.7%)</li>
+<li>Hvetemalt – 500 g (8.3%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Hallertauer Mittelfrüh – 24.7 g (60 min, 12 IBU)</li>
+<li>Tettnang – 29.7 g (45 min, 8 IBU)</li>
+<li>Hallertauer Hersbrucker – 19.8 g (30 min, 6 IBU)</li>
+<li>Cascade – 14.8 g (15 min, 3 IBU)</li>
+<li>Tettnang – 29.7 g (5 min, 2 IBU)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP029 German Ale/Kölsch (75%)</p>
+
+<h4>Fermentering</h4>
+<ul>
+<li>Start: 16–18 °C</li>
+<li>Økes til ca. 20 °C når aktiviteten avtar</li>
+<li>Kaldlagring nær 0 °C</li>
+</ul>
+
+<p><strong>Karbonering:</strong> 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<ul>
+<li>Gjæres kjølig for ren profil</li>
+<li>Temperaturøkning mot slutten hjelper utgjæring</li>
+<li>Kaldlagring er viktig for klarhet og klassisk Kölsch-karakter</li>
+</ul>
+`
+},
+
+{
+    name: "Ginger with Freckles",
+    year: 2013,
+    style: "Spiced Ale",
+
+    abv: "6.2%",
+    ibu: 52,
+    ebc: 16.7,
+    og: 1.059,
+    fg: 1.012,
+
+    notes: "Frisk og krydret ale med tydelig ingefærpreg, lett sitrus og en tørr, ren avslutning.",
+
+    story: "Et øl i samme gate som Ginger Bells, men med færre krydder og et renere uttrykk. Fokus på ingefær og sitrus, støttet av en solid maltbase og moderne humleprofil.",
+
+    ingredients: `
+<h4>MGL Ginger with Freckles</h4>
+<p><strong>Spiced Ale</strong></p>
+<p>6.2% / 14.5 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (75% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 23 L | Koketid: 90 min</p>
+<p>Mash: 15.85 L | Sparge: 15.73 L | Totalt vann: 31.58 L</p>
+<p>Pre-boil volum: 28 L | SG: 1.053</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.059 | FG: 1.012 | IBU: 52 | BU/GU: 0.88 | EBC: 16.7</p>
+
+<h4>Mash</h4>
+<ul>
+<li>51 °C – 10 min</li>
+<li>67 °C – 45 min</li>
+<li>78 °C – 5 min</li>
+</ul>
+
+<h4>Malts (5.87 kg)</h4>
+<ul>
+<li>Maris Otter – 5.5 kg (93.7%)</li>
+<li>Dark Crystal – 220 g (3.8%)</li>
+<li>Hvetemalt – 150 g (2.6%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Amarillo – 20 g (60 min, 23 IBU)</li>
+<li>Cascade – 10 g (45 min, 7 IBU)</li>
+<li>Cascade – 15 g (30 min, 8 IBU)</li>
+<li>Amarillo – 15 g (15 min, 9 IBU)</li>
+<li>Amarillo – 20 g (5 min, 5 IBU)</li>
+</ul>
+
+<h4>Krydder</h4>
+<ul>
+<li>Ingefærrot – ca. 400–420 g (10–15 min, i humlepose)</li>
+<li>Sort pepper – ca. 1 ts / ~4 g (10–15 min, i humlepose)</li>
+</ul>
+
+<h4>Frukt</h4>
+<ul>
+<li>2 appelsiner + 1 sitron (skall + fruktkjøtt)</li>
+<li>Tilsettes i gjæringskar (sanitert)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP001 California Ale (76.5%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 19 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<ul>
+<li>Ingefær og pepper tilsettes i humlepose de siste 10–15 minuttene av kok</li>
+<li>Bruk økologisk sitrus</li>
+<li>Fjern det hvite fra skallet for å unngå bitterhet</li>
+<li>Skall og frukt legges i sanitert humlepose i gjæringskar</li>
+<li>Batch 1: ca. 423 g skrellet ingefær og ~4 g pepper fungerte godt</li>
+</ul>
+`
+},
+
+{
+    name: "Ginger Bells",
+    year: 2013,
+    style: "Spiced Winter Ale",
+
+    abv: "5.9%",
+    ibu: 50,
+    ebc: 16.9,
+    og: 1.059,
+    fg: 1.014,
+
+    notes: "Krydret juleøl med tydelig ingefærpreg, sitrus og varme kryddertoner. Frisk, aromatisk og kompleks.",
+
+    story: "Et juleøl inspirert av klassiske krydderprofiler kombinert med moderne humle. Målet var å lage et øl med tydelig ingefærkarakter balansert av sitrus og varme krydder som nellik og allehånde.",
+
+    ingredients: `
+<h4>MGL Ginger Bells</h4>
+<p><strong>Spiced Winter Ale</strong></p>
+<p>5.9% / 14.6 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (75% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 23 L | Koketid: 90 min</p>
+<p>Mash: 15.98 L | Sparge: 15.64 L | Totalt vann: 31.62 L</p>
+<p>Pre-boil volum: 28 L | SG: 1.053</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.059 | FG: 1.014 | IBU: 50 | BU/GU: 0.85 | EBC: 16.9</p>
+
+<h4>Mash</h4>
+<ul>
+<li>55 °C – 25 min</li>
+<li>66 °C – 60 min</li>
+<li>78 °C – 5 min (mash-out)</li>
+</ul>
+
+<h4>Malts (5.92 kg)</h4>
+<ul>
+<li>Maris Otter – 5.5 kg (92.9%)</li>
+<li>Dark Crystal – 220 g (3.7%)</li>
+<li>Hvetemalt – 200 g (3.4%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Amarillo – 20 g (60 min, 23 IBU)</li>
+<li>Cascade – 10 g (45 min, 7 IBU)</li>
+<li>Cascade – 15 g (30 min, 8 IBU)</li>
+<li>Amarillo – 15 g (15 min, 8 IBU)</li>
+<li>Amarillo – 20 g (5 min, 5 IBU)</li>
+</ul>
+
+<h4>Krydder</h4>
+<ul>
+<li>Ingefærrot – ca. 400 g (10–15 min, i humlepose)</li>
+<li>Korianderfrø – ca. 1 ts (2–5 min)</li>
+<li>Allehånde – ca. 1/4 ts (2–5 min)</li>
+<li>Nellik – ca. 1 ts (10–15 min)</li>
+<li>Sort pepper – ca. 1 ts (10–15 min)</li>
+</ul>
+
+<h4>Frukt</h4>
+<ul>
+<li>2 appelsiner + 1 sitron (skall + fruktkjøtt)</li>
+<li>Tilsettes i gjæringskar (sanitert)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP051 California Ale V (72.5%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 18 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<ul>
+<li>Ingefær, nellik og pepper tilsettes i humlepose de siste 10–15 minuttene av kok</li>
+<li>Koriander og allehånde tilsettes de siste minuttene av kok</li>
+<li>Bruk økologisk sitrus</li>
+<li>Fjern det hvite fra skallet for å unngå bitterhet</li>
+<li>Skall og frukt legges i sanitert humlepose i gjæringskar</li>
+</ul>
+`
+},
+
+{
+    name: "TeaPA",
+    year: 2014,
+    style: "ESB (Tea-infused)",
+
+    abv: "5.6%",
+    ibu: 33,
+    ebc: 16.4,
+    og: 1.061,
+    fg: 1.018,
+
+    notes: "Klassisk britisk maltprofil med innslag av sitrus og bergamott fra Earl Grey-te. Rund, balansert og lett aromatisk.",
+
+    story: "Et forsøk på å kombinere britisk øltradisjon med te-kultur. Basert på en klassisk ESB, men med tilsetning av Earl Grey for å gi et subtilt preg av bergamott og sitrus. Resultatet er et øl som ligger i grenseland mellom tradisjon og eksperiment.",
+
+    ingredients: `
+<h4>MGL TeaPA</h4>
+<p><strong>Extra Special Bitter (ESB)</strong></p>
+<p>5.6% / 15 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (75% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 23 L | Koketid: 90 min</p>
+<p>Mash: 16.47 L | Sparge: 15.29 L | Totalt vann: 31.76 L</p>
+<p>Pre-boil volum: 28 L | SG: 1.055</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.061 | FG: 1.018 | IBU: 33 | BU/GU: 0.53 | EBC: 16.4</p>
+
+<h4>Mash</h4>
+<ul>
+<li>66 °C – 80 min</li>
+<li>78 °C – 10 min</li>
+</ul>
+
+<h4>Malts (6.1 kg)</h4>
+<ul>
+<li>Maris Otter – 5.5 kg (90.2%)</li>
+<li>Hvetemalt – 400 g (6.6%)</li>
+<li>Dark Crystal – 200 g (3.3%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Citra – 20 g (60 min, 24 IBU)</li>
+<li>Tettnang – 20 g (15 min, 3 IBU)</li>
+<li>Cascade – 15 g (15 min, 5 IBU)</li>
+</ul>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Earl Grey-te – 25 g (kok)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP002 English Ale (66.5%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 18 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<ul>
+<li>Lag ca. 5 liter te separat (1 ts per 2,5 dl vann)</li>
+<li>Trekk teen i ca. 3 minutter etter oppkok</li>
+<li>Tilsett teen ved nedkjøling av vørteren</li>
+<li>Bruk gjerne humlepose til teen for enkel håndtering</li>
+</ul>
+`
+},
+
+{
+    name: "Great Auk Hop",
+    year: 2014,
+    style: "American IPA (English yeast)",
+
+    abv: "4.7%",
+    ibu: 53,
+    ebc: 13.4,
+    og: 1.052,
+    fg: 1.016,
+
+    notes: "Humledrevet øl med tydelig sitrus- og tropisk preg, balansert av en lett karamellaktig maltbase.",
+
+    story: "En IPA som starter i britisk tradisjon, men tydelig trekker mot moderne amerikansk humleprofil. Kombinasjonen av klassisk engelsk gjær og aggressive amerikanske humler gir et spennende hybriduttrykk.",
+
+    ingredients: `
+<h4>MGL Great Auk Hop</h4>
+<p><strong>English IPA</strong></p>
+<p>4.7% / 12.9 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (70% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 23 L | Koketid: 60 min</p>
+<p>Mash: 14.85 L | Sparge: 16.43 L | Totalt vann: 31.28 L</p>
+<p>Pre-boil volum: 28 L | SG: 1.047</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.052 | FG: 1.016 | IBU: 53 | BU/GU: 1.00 | EBC: 13.4</p>
+
+<h4>Mash</h4>
+<ul>
+<li>66 °C – 80 min</li>
+<li>78 °C – 10 min</li>
+</ul>
+
+<h4>Malts (5.5 kg)</h4>
+<ul>
+<li>Pilsnermalt – 3.5 kg (63.6%)</li>
+<li>Maris Otter – 1.5 kg (27.3%)</li>
+<li>Mørk karamellmalt (90 EBC) – 500 g (9.1%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Cascade – 20 g (60 min, 19 IBU)</li>
+<li>Citra – 25 g (30 min, 25 IBU)</li>
+<li>Simcoe – 30 g (5 min, 8 IBU)</li>
+</ul>
+
+<h4>Tørrhumling</h4>
+<ul>
+<li>Cascade – 70 g</li>
+<li>Simcoe – 70 g</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP002 English Ale (66.5%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 22 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+`
+},
+
+{
+    name: "Stim Lager",
+    year: 2014,
+    style: "Steam Lager",
+
+    abv: "5.6%",
+    ibu: 31,
+    ebc: 11,
+    og: 1.061,
+    fg: 1.018,
+
+    notes: "Maltpreget lager med karamelltoner og lett brødaktig sødme, balansert av både klassisk og moderne humleprofil.",
+
+    story: "En utradisjonell Märzen med innslag av amerikansk humle og tørrhumling, kombinert med klassisk tysk maltbase. Bruken av San Francisco-lagergjær gir et hybridpreg mellom lager og ale.",
+
+    ingredients: `
+<h4>MGL Stim Lager</h4>
+<p><strong>Steam Lager</strong></p>
+<p>5.6% / 15 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (80% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 23 L | Koketid: 90 min</p>
+<p>Mash: 15.12 L | Sparge: 16.24 L | Totalt vann: 31.36 L</p>
+<p>Pre-boil volum: 28 L | SG: 1.055</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.061 | FG: 1.018 | IBU: 31 | BU/GU: 0.51 | EBC: 11</p>
+
+<h4>Mash</h4>
+<ul>
+<li>51 °C – 25 min</li>
+<li>67 °C – 60 min</li>
+<li>78 °C – 5 min</li>
+</ul>
+
+<h4>Malts (5.6 kg)</h4>
+<ul>
+<li>Pilsnermalt – 4.8 kg (85.7%)</li>
+<li>Vienna – 500 g (8.9%)</li>
+<li>Mørk karamellmalt (90 EBC) – 300 g (5.4%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Cascade – 30 g (60 min, 21 IBU)</li>
+<li>Saaz – 25 g (15 min, 4 IBU)</li>
+<li>Hallertau Mittelfrüh – 15 g (15 min, 3 IBU)</li>
+<li>Saaz – 20 g (5 min, 1 IBU)</li>
+<li>Hallertau Mittelfrüh – 15 g (5 min, 1 IBU)</li>
+</ul>
+
+<h4>Tørrhumling</h4>
+<ul>
+<li>Hallertau Mittelfrüh – 30 g</li>
+<li>Cascade – 25 g</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP810 San Francisco Lager (67.5%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 13 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+`
+},
+
+{
+    name: "Le Moine Martin",
+    year: 2014,
+    style: "Belgian Strong Dark Ale",
+
+    abv: "9.6%",
+    ibu: 37,
+    ebc: 52.5,
+    og: 1.087,
+    fg: 1.014,
+
+    notes: "Mørk og kompleks belgisk ale med toner av karamell, tørket frukt, krydder og lett ristede innslag.",
+
+    story: "Et kraftig belgisk-inspirert øl med fokus på dybde og kompleksitet. Kombinasjonen av mørk kandisirup, spesialmalt og belgisk gjær gir et rikt og lagvis smaksbilde som utvikler seg over tid.",
+
+    ingredients: `
+<h4>MGL Le Moine Martin</h4>
+<p><strong>Belgian Strong Dark Ale</strong></p>
+<p>9.6% / 20.9 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (75% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 23 L | Koketid: 90 min</p>
+<p>Mash: 21.02 L | Sparge: 12.09 L | Totalt vann: 33.11 L</p>
+<p>Pre-boil volum: 28 L | SG: 1.071</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.087 | FG: 1.014 | IBU: 37 | BU/GU: 0.43 | EBC: 52.5</p>
+
+<h4>Mash</h4>
+<ul>
+<li>60 °C – 30 min</li>
+<li>68 °C – 60 min</li>
+<li>75 °C – 5 min</li>
+</ul>
+
+<h4>Malts (7.785 kg)</h4>
+<ul>
+<li>Pilsnermalt – 6.136 kg (72%)</li>
+<li>Caramunich II – 955 g (11.2%)</li>
+<li>Flaket mais – 307 g (3.6%)</li>
+<li>Special B – 273 g (3.2%)</li>
+<li>Carafa Special I – 114 g (1.3%)</li>
+</ul>
+
+<h4>Sukker</h4>
+<ul>
+<li>Mørk kandisirup – 739 g (8.7%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Styrian Golding (Bobek) – 200.1 g (70 min, 31 IBU)</li>
+<li>Hersbrucker Hallertau – 36.6 g (30 min, 6 IBU)</li>
+<li>Hersbrucker Hallertau – 12.2 g (5 min, 1 IBU)</li>
+</ul>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Korianderfrø (knust) – siste 5 min av koketid</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP530 Abbey Ale (77.5%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 18 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+`
+},
+
+{
+    name: "La Religieuse Martha",
+    year: 2014,
+    style: "Belgian Tripel",
+
+    abv: "11.0%",
+    ibu: 35,
+    ebc: 12.6,
+    og: 1.098,
+    fg: 1.014,
+
+    notes: "Kraftig og kompleks tripel med fruktige estere, lett krydderpreg og tørr avslutning til tross for høy styrke.",
+
+    story: "En ambisiøs tripel brygget med klassisk belgisk inspirasjon, men med ekstra styrke. Ølet balanserer høy alkoholprosent med lys maltprofil og sukkertilsetning for å oppnå en tørr og elegant avslutning.",
+
+    ingredients: `
+<h4>MGL La Religieuse Martha</h4>
+<p><strong>Belgian Tripel</strong></p>
+<p>11.0% / 23.3 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (70% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 19 L | Koketid: 90 min</p>
+<p>Mash: 20.3 L | Sparge: 9.72 L | Totalt vann: 30.02 L</p>
+<p>Pre-boil volum: 25 L | SG: 1.072</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.098 | FG: 1.014 | IBU: 35 | BU/GU: 0.36 | EBC: 12.6</p>
+
+<h4>Mash</h4>
+<ul>
+<li>66 °C – 60 min</li>
+</ul>
+
+<h4>Malts (7.52 kg)</h4>
+<ul>
+<li>Pilsnermalt – 6.85 kg (83.6%)</li>
+<li>Lys karamellmalt (30 EBC) – 670 g (8.2%)</li>
+</ul>
+
+<h4>Sukker</h4>
+<ul>
+<li>Candi Sugar Pale – 670 g (8.2%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Styrian Golding (Bobek) – 40 g (90 min, 8 IBU)</li>
+<li>Tettnang – 59 g (60 min, 13 IBU)</li>
+<li>Fuggles – 30 g (30 min, 12 IBU)</li>
+<li>Saaz – 28 g (5 min, 2 IBU)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP540 Abbey IV Ale (76%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 22 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<ul>
+<li>Sukker tilsettes de siste 10–15 minuttene av koketiden</li>
+</ul>
+`
+},
+
+{
+    name: "Easy Livin’",
+    year: 2015,
+    style: "American Pale Ale",
+
+    abv: "5.5%",
+    ibu: 32,
+    ebc: 11.6,
+    og: 1.053,
+    fg: 1.011,
+
+    notes: "Lettdrikkelig pale ale med klassisk sitruspreg, moderat bitterhet og ren maltprofil.",
+
+    story: "En tidlig pale ale-oppskrift med fokus på balanse og drikkbarhet. Kombinasjonen av Maris Otter og pilsnermalt gir en lett, men solid base, mens Cascade og Centennial gir klassisk amerikansk humleprofil. Denne la grunnlaget for senere iterasjoner som Easy Livin’ 2.0. Easy Livin'-serien har alltid utgangspunkt i et ferdig, all-grain øl-sett - derav navnet.",
+
+    ingredients: `
+<h4>MGL Easy Livin’</h4>
+<p><strong>American Pale Ale</strong></p>
+<p>5.5% / 13.1 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (75% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 23 L | Koketid: 90 min</p>
+<p>Mash: 14.18 L | Sparge: 16.9 L | Totalt vann: 31.08 L</p>
+<p>Pre-boil volum: 28 L | SG: 1.048</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.053 | FG: 1.011 | IBU: 32 | BU/GU: 0.59 | EBC: 11.6</p>
+
+<h4>Mash</h4>
+<ul>
+<li>51 °C – 10 min</li>
+<li>67 °C – 45 min</li>
+<li>78 °C – 5 min</li>
+</ul>
+
+<h4>Malts (5.25 kg)</h4>
+<ul>
+<li>Maris Otter – 2.5 kg (47.6%)</li>
+<li>Pilsnermalt – 2.5 kg (47.6%)</li>
+<li>Crystal 120 – 250 g (4.8%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Chinook – 5 g (60 min, 7 IBU)</li>
+<li>Cascade – 28 g (15 min, 10 IBU)</li>
+<li>Centennial – 28 g (15 min, 15 IBU)</li>
+<li>Cascade – 28 g (0 min)</li>
+<li>Centennial – 28 g (0 min)</li>
+<li>Cascade – 28 g (tørrhumling)</li>
+<li>Centennial – 28 g (tørrhumling)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP001 California Ale (76.5%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 18 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+`
+},
+
+{
+    name: "Gå Sjøl",
+    year: 2015,
+    style: "Saison",
+
+    abv: "6.3%",
+    ibu: 38,
+    ebc: 12,
+    og: 1.063,
+    fg: 1.015,
+
+    notes: "Klassisk saison med frisk karakter, lett krydderpreg og god balanse mellom malt og humle.",
+
+    story: "En saison bygget på en tradisjonell maltbase med fokus på drikkbarhet og balanse. Ølet er laget for å stå stødig på egne bein – derav navnet – med en klassisk profil og moderate justeringer.",
+
+    ingredients: `
+<h4>MGL Gå Sjøl</h4>
+<p><strong>Saison</strong></p>
+<p>6.3% / 15.5 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (75% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 19 L | Koketid: 90 min</p>
+<p>Mash: 13.69 L | Sparge: 14.37 L | Totalt vann: 28.06 L</p>
+<p>Pre-boil volum: 25 L | SG: 1.052</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.063 | FG: 1.015 | IBU: 38 | BU/GU: 0.61 | EBC: 12</p>
+
+<h4>Mash</h4>
+<ul>
+<li>66 °C – 80 min</li>
+<li>78 °C – 10 min</li>
+</ul>
+
+<h4>Malts (5.07 kg)</h4>
+<ul>
+<li>Pilsnermalt – 3.6 kg (71%)</li>
+<li>Hvetemalt – 1 kg (19.7%)</li>
+<li>Flaket hvete – 200 g (3.9%)</li>
+<li>Pale Crystal – 150 g (3%)</li>
+<li>Caramunich II – 120 g (2.4%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Tettnang – 25 g (90 min, 14 IBU)</li>
+<li>Tettnang – 25 g (60 min, 13 IBU)</li>
+<li>Fuggles – 30 g (15 min, 8 IBU)</li>
+<li>Fuggles – 30 g (5 min, 3 IBU)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP565 Belgian Saison I (70%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 20 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+`
+},
+
+{ name: "Øl som Fortjent", year: 2015, style: "Weizen/Weissbier", 
+    abv: "5.6%",
+    ibu: 12,
+    ebc: 7.7,
+    og: 1.055,
+    fg: 1.012,
+    story: "Dette ølet ble designet og brygget til en jobbfest da bryggmesteren jobbet i Kirkens Bymisjon, på et arbeidstilbud som het Lønn som fortjent. Ølets oppskrift er den samme som S5xW.",
+    ingredients: `
+<h4>MGL Øl som Fortjent</h4>
+<p><strong>Weizen / Weissbier</strong></p>
+<p>5.6% / 13.5 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (70% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 20 L | Koketid: 75 min</p>
+<p>Mash: 13.91 L | Sparge: 17.09 L | Totalt vann: 31 L</p>
+<p>Pre-boil volum: 28 L | SG: 1.043</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.055 | FG: 1.012 | IBU: 12 | BU/GU: 0.23 | EBC: 7.7</p>
+
+<h4>Mash</h4>
+<ul>
+<li>43 °C – 10 min</li>
+<li>51 °C – 20 min</li>
+<li>67 °C – 50 min</li>
+<li>78 °C – 5 min (mash-out)</li>
+</ul>
+
+<h4>Malts (5.15 kg)</h4>
+<ul>
+<li>Hvetemalt – 2.3 kg (44.7%)</li>
+<li>Pilsnermalt – 2.3 kg (44.7%)</li>
+<li>Flaket havre – 350 g (6.8%)</li>
+<li>Risskall – 200 g (3.9%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Hallertauer Mittelfrüh – 17 g (60 min, 12 IBU)</li>
+</ul>
+
+<h4>Vannjustering</h4>
+<ul>
+<li>CaCl₂ – 2.8 g</li>
+<li>Epsom salt – 0.6 g</li>
+<li>Gypsum – 0.6 g</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP380 Hefeweizen IV</p>
+<p>416.7 ml pitch</p>
+
+<h4>Fermentering</h4>
+<p>17 °C – 14 dager</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Vannprofil</h4>
+<p>Ca: 45 | Mg: 2 | Na: 2 | Cl: 50 | SO₄: 25 | HCO₃: 38</p>
+
+<h4>Notater</h4>
+<p>Risskall brukes for å unngå fastsatt mesk.</p>
+`
+ },
+
+{ name: "Einfer", year: 2015, style: "Ingefærøl",
+    story: "Dette var et forsøk på å lage et leskende og godt ingefærøl - slik bryggerens mor lager det - uten malt. Det gjæret helt ut og ble knusktørt og alkoholrikt, når målet var relativt søtt og alkoholfattig øl, slik bryggeren var vant til fra barndommen av. Ingefærølet ble godt, men med eet annet bruksområde, og bryggeren lærte at gode forhold for gjæring kan føre til uønsket resultat."
+ },
+
+{
+    name: "Goð Jøl",
+    year: 2015,
+    style: "Northern English Brown Ale",
+
+    abv: "6.3%",
+    ibu: 37,
+    ebc: 43,
+    og: 1.060,
+    fg: 1.012,
+
+    notes: "Mørk og maltpreget brown ale med nøttepreg, karamell og lett sjokolade, balansert av moderat bitterhet.",
+
+    story: "Her var målet et juleøl som ikke skulle være av de aller tyngste, men fortsatt et skikkelig juleøl. En kraftigere brown ale med inspirasjon fra nordengelsk tradisjon, men med litt ekstra dybde og styrke. Ølet utvikler seg betydelig med lagring, hvor smakene runder seg av og integreres bedre over tid.",
+
+    ingredients: `
+<h4>MGL Goð Jøl</h4>
+<p><strong>Northern English Brown Ale</strong></p>
+<p>6.3% / 14.7 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (70% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 19 L | Koketid: 90 min</p>
+<p>Mash: 14.42 L | Sparge: 13.85 L | Totalt vann: 28.27 L</p>
+<p>Pre-boil volum: 25 L | SG: 1.049</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.060 | FG: 1.012 | IBU: 37 | BU/GU: 0.62 | EBC: 43</p>
+
+<h4>Mash</h4>
+<ul>
+<li>51 °C – 25 min</li>
+<li>67 °C – 60 min</li>
+<li>78 °C – 5 min</li>
+</ul>
+
+<h4>Malts (5.34 kg)</h4>
+<ul>
+<li>Maris Otter – 3.35 kg (62.7%)</li>
+<li>Munich mørk – 625 g (11.7%)</li>
+<li>Hvetemalt – 480 g (9%)</li>
+<li>Pale Crystal – 360 g (6.7%)</li>
+<li>Amber Malt – 210 g (3.9%)</li>
+<li>Chocolate Malt – 160 g (3%)</li>
+<li>Brown Malt – 155 g (2.9%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Aurora – 22 g (60 min, 17 IBU)</li>
+<li>East Kent Goldings – 61.9 g (15 min, 20 IBU)</li>
+</ul>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Gjærnæring – 15 min</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP007 Dry English Ale (75%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 18 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<ul>
+<li>Ølet utvikler seg betydelig etter lagring</li>
+<li>Første batch var best etter ca. 8 uker</li>
+<li>Anbefalt lagring: ~3 måneder før servering</li>
+</ul>
+`
+},
+
+{
+    name: "Quark-Gluon Plasma",
+    year: 2016,
+    style: "Double IPA",
+
+    abv: "9.6%",
+    ibu: 197,
+    ebc: 16.2,
+    og: 1.087,
+    fg: 1.014,
+
+    notes: "Ekstremt humledrevet Double IPA med massiv bitterhet, intens aroma og solid maltkropp som balanserer trykket.",
+
+    story: "Quark-Gluon Plasma var i følge et søk på internett det tyngste materialet i universet, og det var det bryggeren forsøkte å brygge også.Inspirert av fysikkens mest ekstreme tilstander – der materie brytes ned til sine minste bestanddeler. Dette ølet er bryggeriets forsøk på å gjøre det samme med humle: presse grensene for bitterhet, aroma og intensitet til det ytterste. Resultatet er et kompromissløst øl for de som virkelig vil teste hvor langt en IPA kan strekkes.",
+
+    ingredients: `
+<h4>MGL Quark-Gluon Plasma</h4>
+<p><strong>Double IPA</strong></p>
+<p>9.6% / 20.8 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (75% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 19 L | Koketid: 90 min</p>
+<p>Mash: 18.75 L | Sparge: 12.73 L | Totalt vann: 31.48 L</p>
+<p>Pre-boil volum: 27 L | SG: 1.064</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.087 | FG: 1.014 | IBU: 197 | BU/GU: 2.27 | EBC: 16.2</p>
+
+<h4>Mash</h4>
+<ul>
+<li>38 °C – 20 min</li>
+<li>62 °C – 10 min (oppvarming)</li>
+<li>62 °C – 25 min</li>
+<li>66 °C – 5 min (oppvarming)</li>
+<li>66 °C – 30 min</li>
+<li>77 °C – 15 min (mash-out)</li>
+</ul>
+
+<h4>Malts (6.945 kg)</h4>
+<ul>
+<li>Maris Otter – 6.35 kg (89.5%)</li>
+<li>Carapils – 240 g (3.4%)</li>
+<li>Crystal 120 – 240 g (3.4%)</li>
+<li>Caramalt – 115 g (1.6%)</li>
+</ul>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Demerara sukker – 150 g (2.1%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Columbus – 70 g (90 min, 131 IBU)</li>
+<li>Columbus – 20 g (45 min, 32 IBU)</li>
+<li>Simcoe – 25 g (30 min, 28 IBU)</li>
+<li>Simcoe – 70 g (1 min)</li>
+<li>Centennial – 40 g (1 min)</li>
+</ul>
+
+<h4>Tørrhumling</h4>
+<ul>
+<li>30 g Columbus + 30 g Simcoe + 30 g Centennial (etter stormgjæring, ca. 12–14 dager)</li>
+<li>8 g Columbus + 8 g Simcoe + 8 g Centennial (siste 5 dager)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP001 California Ale (76.5%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 18 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+`
+},
+
+{
+    name: "A Pilsnarr",
+    year: 2016,
+    style: "Czech Premium Pale Lager",
+
+    abv: "6.6%",
+    ibu: 98,
+    ebc: 8.7,
+    og: 1.062,
+    fg: 1.012,
+
+    notes: "Ekstremt humledrevet lager med høy bitterhet, men fortsatt balansert av ren maltprofil og crisp avslutning.",
+
+    story: "Her er det jo rimelig selvforklarende når det var dette ølet var tenkt å skulle inntas. Et bevisst utradisjonelt forsøk på å presse grensene for hva en pils kan være. Klassisk tsjekkisk maltbase kombineres med en svært aggressiv humleprofil, spesielt gjennom kraftig first wort hopping. Resultatet er en hybrid mellom klassisk lager og moderne humlefokusert øl.",
+
+    ingredients: `
+<h4>MGL A Pilsnarr</h4>
+<p><strong>Czech Premium Pale Lager</strong></p>
+<p>6.6% / 15.2 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (70% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 19 L | Koketid: 60 min</p>
+<p>Mash: 14.45 L | Sparge: 14.79 L | Totalt vann: 29.24 L</p>
+<p>Pre-boil volum: 26 L | SG: 1.049</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.062 | FG: 1.012 | IBU: 98 | BU/GU: 1.58 | EBC: 8.7</p>
+
+<h4>Mash</h4>
+<ul>
+<li>66 °C – 60 min</li>
+</ul>
+
+<h4>Malts (5.35 kg)</h4>
+<ul>
+<li>Pilsnermalt – 5 kg (93.5%)</li>
+<li>Munich mørk – 350 g (6.5%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Perle – 63.9 g (First Wort, 73 IBU)</li>
+<li>Saaz – 59 g (30 min, 17 IBU)</li>
+<li>Saaz – 59 g (10 min, 8 IBU)</li>
+<li>Saaz – 49.2 g (1 min, 1 IBU)</li>
+</ul>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Irish Moss – 15 min</li>
+<li>Gjærnæring – 15 min</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP830 German Lager (76.5%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 10 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+`
+},
+
+{
+    name: "APA (Definite Singular)",
+    year: 2016,
+    style: "American Pale Ale",
+
+    abv: "5.8%",
+    ibu: 43,
+    ebc: 13,
+    og: 1.056,
+    fg: 1.012,
+
+    notes: "Klassisk amerikansk pale ale med tydelig sitrus- og humleprofil, balansert maltbase og god bitterhet.",
+
+    story: "En hybrid-inspirert APA som kombinerer britisk og tysk maltbase med klassiske amerikanske humler. Ølet er designet for å fremheve sitrus- og tropiske toner fra Citra og Cascade, samtidig som maltprofilen gir en rund og balansert kropp.",
+
+    ingredients: `
+<h4>MGL APA (Definite Singular)</h4>
+<p><strong>American Pale Ale</strong></p>
+<p>5.8% / 13.8 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (75% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 23 L | Koketid: 90 min</p>
+<p>Mash: 14.96 L | Sparge: 16.35 L | Totalt vann: 31.31 L</p>
+<p>Pre-boil volum: 28 L | SG: 1.050</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.056 | FG: 1.012 | IBU: 43 | BU/GU: 0.76 | EBC: 13</p>
+
+<h4>Mash</h4>
+<ul>
+<li>62 °C – 10 min</li>
+<li>66 °C – 60 min</li>
+<li>77 °C – 5 min</li>
+</ul>
+
+<h4>Malts (5.54 kg)</h4>
+<ul>
+<li>Maris Otter – 2.5 kg (45.1%)</li>
+<li>Pilsnermalt – 2.5 kg (45.1%)</li>
+<li>Crystal 120 EBC – 320 g (5.8%)</li>
+<li>Carapils – 220 g (4%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Citra – 15 g (60 min, 21 IBU)</li>
+<li>Citra – 20 g (15 min, 14 IBU)</li>
+<li>Cascade – 20 g (15 min, 7 IBU)</li>
+<li>Citra – 25 g (0 min)</li>
+<li>Cascade – 25 g (0 min)</li>
+<li>Cascade – 30 g (tørrhumling)</li>
+<li>Citra – 20 g (tørrhumling)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP001 California Ale (76.5%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 18 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+`
+},
+
+{ name: "SaisÅsta", year: 2016, style: "Saison" },
+
+{ name: "Biscuit de Garde", year: 2016, style: "" },
+
+{ name: "Flaten Sæterøl", year: 2016, style: "Saison",
+    abv: "6.3%",
+    ibu: 38,
+    ebc: 12.4,
+    og: 1.056,
+    fg: 1.010,
+
+    notes:"En passe krydret og bitter saison. Tørr og med noe maltkropp.",
+    story:"Dette var et saison-øl bryggeren ble såpass fornøyd med at det ble lagt til grunn for Flaten-serien som består av de tre ølene Flaten Saison, Funky Saison og Sur Flaten. Alle fikk også samme etikett med variasjoner. ",
+    ingredients: `
+<h4>MGL Flaten Sæterøl – Saison</h4>
+<p><strong>Saison</strong></p>
+<p>6.3% / 15.3 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (70% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 19 L | Koketid: 90 min</p>
+<p>Mash: 14.55 L | Sparge: 13.76 L | Totalt vann: 28.31 L</p>
+<p>Pre-boil volum: 25 L | SG: 1.052</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.063 | FG: 1.015 | IBU: 38 | BU/GU: 0.61 | EBC: 12.4</p>
+
+<h4>Mash</h4>
+<ul>
+<li>51 °C – 20 min</li>
+<li>66 °C – 10 min (oppvarming)</li>
+<li>66 °C – 50 min</li>
+<li>67 °C – 10 min (mash-out)</li>
+</ul>
+
+<h4>Malts (5.39 kg)</h4>
+<ul>
+<li>Pilsnermalt – 3.9 kg (72.4%)</li>
+<li>Hvetemalt – 1 kg (18.6%)</li>
+<li>Flaket hvete – 200 g (3.7%)</li>
+<li>Pale Crystal – 160 g (3%)</li>
+<li>Caramunich II – 130 g (2.4%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Tettnang – 25 g (90 min, 14 IBU)</li>
+<li>Tettnang – 25 g (60 min, 13 IBU)</li>
+<li>Fuggles – 30 g (15 min, 8 IBU)</li>
+<li>Fuggles – 30 g (5 min, 3 IBU)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>The Yeast Bay Saison Blend</p>
+<p><em>(opprinnelig: White Labs WLP565 Belgian Saison I)</em></p>
+
+<h4>Fermentering</h4>
+<p>Primær: 20 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<p>Gjærvalg endret til The Yeast Bay Saison Blend for økt kompleksitet og karakter.</p>
+`
+},
+
+{ name: "All I Want for Christmas is Brew", year: 2016, style: "Amber Ale",
+    abv: "6.6%",
+    story: "Dette var et øl som ble brygget til en av Bjørvika Business Bands julefester, og var et av de (om ikke det) første samarbeidet mellom MGL og storbandet, og Bjørvika Business Brew m egen logo ble opprettet. Bryggmesteren er den samme for begge bryggforetakene."
+ },
+
+{ name: "Jólablot", year: 2016, style: "Doppelbock",
+    abv: "9.1%",
+    ibu: 33,
+    ebc: 32.5,
+    og: 1.087,
+    fg: 1.018,
+
+    notes: "Fyldig, mørk doppelbock med innslag av kaffe og sitrus.",
+    story: "Dette var en del av forsøkene på å lage en god juleøl som ble nokså vellykket, og bedre enn etterfølgeren Julegeita. Bryggmesteren ble også veldig fornøyd med etiketten på denne. Hadde det ikke vært for at den senere Porter Salut ble så stor hit, hadde den nok blitt brygget igjen.",
+    ingredients: `
+<h4>MGL Jólablot (Braumeister Size)</h4>
+<p><strong>Doppelbock</strong></p>
+<p>9.1% / 20.8 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (75% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 19 L | Koketid: 80 min</p>
+<p>Mash: 19.24 L | Sparge: 11.42 L | Totalt vann: 30.66 L</p>
+<p>Pre-boil volum: 26 L | SG: 1.069</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.087 | FG: 1.018 | IBU: 33 | BU/GU: 0.38 | EBC: 32.5</p>
+
+<h4>Mash</h4>
+<ul>
+<li>65 °C – 60 min</li>
+</ul>
+
+<h4>Malts (7.13 kg)</h4>
+<ul>
+<li>Pilsnermalt – 4.7 kg (66%)</li>
+<li>Spraymalt (Pilsen) – 1 kg (14%)</li>
+<li>Maris Otter – 700 g (9.8%)</li>
+<li>Dark Crystal – 650 g (9.1%)</li>
+<li>Black Malt – 75 g (1.1%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Perle – 30 g (60 min, 25 IBU)</li>
+<li>Perle – 10 g (30 min, 6 IBU)</li>
+<li>Saaz – 28.5 g (5 min, 2 IBU)</li>
+</ul>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Appelsinskall (bitter) – siste 5 min av kok</li>
+<li>Whirlfloc – 15 min</li>
+<li>Gjærnæring – 15 min</li>
+<li>Kaffe (kaldtrukket) – sekundær</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP833 German Bock Lager</p>
+<p>500 ml pitch</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 10 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<p>Tilsett kaldtrukket kaffe i sekundær (ca. 0,5 L brygg med ~100 g kaffe).</p>
+<p>Husk gjærnæring og klarning.</p>
+`
+},
+
+{ name: "SvinPils", 
+    year: 2017,
+    style: "Czech Pale Lager",
+    abv: "6.0%",
+    ibu: 35,
+    ebc: 6.9,
+    og: 1.056,
+    fg: 1.010,
+
+    notes: "Klassisk tsjekkisk pils med tydelig Saaz-aroma, balansert maltkropp og fast bitterhet.",
+    story: "",
+    ingredients: `
+<h4>MGL Svinpils</h4>
+<p><strong>Czech Pale Lager</strong></p>
+<p>6.0% / 13.7 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (75% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 19 L | Koketid: 90 min</p>
+<p>Mash: 12.15 L | Sparge: 16.41 L | Totalt vann: 28.56 L</p>
+<p>Pre-boil volum: 26 L | SG: 1.044</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.056 | FG: 1.010 | IBU: 35 | BU/GU: 0.62 | EBC: 6.9</p>
+
+<h4>Mash</h4>
+<ul>
+<li>50 °C – 20 min</li>
+<li>65 °C – 30 min</li>
+<li>69 °C – 30 min</li>
+<li>78 °C – 10 min</li>
+</ul>
+
+<h4>Malts (4.5 kg)</h4>
+<ul>
+<li>Pilsnermalt – 3.9 kg (86.7%)</li>
+<li>Carapils – 500 g (11.1%)</li>
+<li>Lys Munich – 100 g (2.2%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Saaz – 60 g (80 min, 30 IBU)</li>
+<li>Saaz – 20 g (15 min, 5 IBU)</li>
+<li>Saaz – 20 g (0 min)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP802 Czech Budejovice Lager</p>
+<p>500 ml pitch</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 10 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+`
+},
+
+{ name: "Funky Flaten", year: 2017, 
+    style: "Saison",
+    abv: "6.6%",
+    ibu: 37,
+    ebc: 11.6,
+    og: 1.060,
+    fg: 1.010,
+
+    notes: "En funky saison med lett ville og komplekse smaker som hadde utviklet seg sakte over år. Relativt tørr.",
+    story: "Dette var et gjenbruk av Flaten Saison, en saison bryggeren var fornøyd med, hvor han ønsket å prøve langtids utvikling av brett-bakterier for å få en kompleks smak. Den sto i lang tid i romtemperatur på en petflaske som er oksygen-tett.",
+    ingredients: `
+<h4>MGL Funky Flaten – Saison</h4>
+<p><strong>Saison</strong></p>
+<p>6.6% / 14.8 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (75% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 19 L | Koketid: 80 min</p>
+<p>Mash: 13.08 L | Sparge: 15.76 L | Totalt vann: 28.84 L</p>
+<p>Pre-boil volum: 26 L | SG: 1.048</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.060 | FG: 1.010 | IBU: 37 | BU/GU: 0.61 | EBC: 11.6</p>
+
+<h4>Mash</h4>
+<ul>
+<li>65 °C – 60 min</li>
+</ul>
+
+<h4>Malts (4.85 kg)</h4>
+<ul>
+<li>Pilsnermalt – 3.5 kg (72.2%)</li>
+<li>Hvetemalt – 900 g (18.6%)</li>
+<li>Flaket hvete – 180 g (3.7%)</li>
+<li>Pale Crystal – 145 g (3%)</li>
+<li>Caramunich II – 120 g (2.5%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Tettnang – 23 g (90 min, 13 IBU)</li>
+<li>Tettnang – 23 g (60 min, 13 IBU)</li>
+<li>Fuggles – 28 g (15 min, 8 IBU)</li>
+<li>Fuggles – 28 g (5 min, 3 IBU)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>The Yeast Bay Saison Brettanomyces Blend</p>
+<p><em>(opprinnelig planlagt: Wyeast 3711 French Saison)</em></p>
+
+<h4>Fermentering</h4>
+<p>Primær: 20 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<p>Gjærvalg endret til The Yeast Bay Saison Brettanomyces Blend (White Labs), som gir et mer funk/preget uttrykk enn klassisk saison-gjær.</p>
+`},
+
+{ name: "Witty Peach",
+    year: 2017,
+    style: "Fruit Wit",
+    abv: "6.4%",
+    ibu: 26,
+    ebc: 8.5,
+    og: 1.032,
+    fg: 1.013,
+    onTap: true ,
+
+    notes: "Frisk, klassisk wit-smak, med god tilstedeværelse av sitrus. Leskedrikk!",
+    story: "Her siktet bryggmester på å nærme seg den populære 1664 Blanc, men med et forsøk på å unngå en like kunstig fruktsmak. Her fant bryggmester ut at aprikospure skulle vise seg å gi ølet ferskensmak i forbindelse med fermenteringsprosessen. Resultatet ble noe annet, men etter bryggeriets ydmyke mening - bedre.",
+    ingredients: `
+<h4>MGL Witty Peach</h4>
+<p><strong>Fruit and Spice Beer</strong></p>
+<p>6.4% / 15.1 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (70% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 19 L | Koketid: 90 min</p>
+<p>Mash: 14.15 L | Sparge: 18.04 L | Totalt vann: 32.19 L</p>
+<p>Pre-boil volum: 28 L | SG: 1.045</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.062 | FG: 1.013 | IBU: 26 | BU/GU: 0.42 | EBC: 8.5</p>
+
+<h4>Mash</h4>
+<ul>
+<li>38 °C – innmesk</li>
+<li>51 °C – 20 min</li>
+<li>67 °C – 50 min</li>
+<li>78 °C – 10 min</li>
+</ul>
+
+<h4>Malts (5.24 kg)</h4>
+<ul>
+<li>Pilsnermalt – 2.5 kg (47.7%)</li>
+<li>Hvetemalt – 2.3 kg (43.9%)</li>
+<li>Torrefied wheat – 440 g (8.4%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Tettnang – 52.8 g (80 min, 21 IBU)</li>
+<li>Tettnang – 23.4 g (15 min, 4 IBU)</li>
+<li>Mosaic – 13.1 g (1 min, 1 IBU)</li>
+</ul>
+
+<h4>Krydder & tilsetninger</h4>
+<ul>
+<li>Appelsinskall (uten hvit del) – 40 g (5 min)</li>
+<li>Sitronskall – 30 g (5 min)</li>
+<li>Aprikoseekstrakt – 1000 g (sekundær)</li>
+</ul>
+
+<h4>Vannjustering</h4>
+<ul>
+<li>CaCl₂ – 5.3 g</li>
+<li>Epsom salt – 4.7 g</li>
+<li>Gypsum – 5.4 g</li>
+</ul>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Whirlfloc – 15 min</li>
+<li>Gjærnæring – 15 min</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP400 Belgian Wit</p>
+
+<h4>Starter</h4>
+<p>1.3 L | 292 milliarder celler</p>
+
+<h4>Fermentering</h4>
+<p>20 °C – 11 dager</p>
+<p>Diacetylrast: 23 °C – 3 dager</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Vannprofil</h4>
+<p>Ca: 100 | Mg: 15 | Na: 2 | Cl: 85 | SO₄: 157 | HCO₃: 38</p>
+
+<h4>Notater</h4>
+<p>Appelsin- og sitronskall tilsettes de siste 5 minuttene av koketiden.</p>
+<p>Aprikospuré tilsettes etter primærgjæring.</p>
+`
+},
+
+{ name: "The Kid with Red Ale", year: 2017, style: "Red Ale" },
+
+{
+    name: "Julegeit",
+    year: 2017,
+    style: "Winter Seasonal Beer",
+
+    abv: "8.5%",
+    ibu: 32,
+    ebc: 32,
+    og: 1.082,
+    fg: 1.017,
+
+    notes: "Fyldig og mørk juleøl med rik maltkarakter, hint av karamell og balansert bitterhet. Et kraftig vinterøl brygget for den mørke årstiden. Kombinerer klassisk maltfylde med sitruspreg fra appelsinskall, og er laget for å utvikle seg godt med litt lagring.",
+
+    story: "Dette var et forsøk på å videreutvikle Jólablot, men viste seg å gå i litt feil retning smaksmessig.",
+
+    ingredients: `
+<h4>MGL Julegeit – Winter Seasonal Beer</h4>
+<p><strong>Winter Seasonal Beer</strong></p>
+<p>8.5% / 19.8 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (75% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 19 L | Koketid: 80 min</p>
+<p>Mash: 18.31 L | Sparge: 12.07 L | Totalt vann: 30.38 L</p>
+<p>Pre-boil volum: 26 L | SG: 1.065</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.082 | FG: 1.017 | IBU: 32 | BU/GU: 0.38 | EBC: 32</p>
+
+<h4>Mash</h4>
+<ul>
+<li>38 °C – 0 min</li>
+<li>51 °C – 20 min</li>
+<li>67 °C – 50 min</li>
+<li>78 °C – 10 min</li>
+</ul>
+
+<h4>Malts (6.78 kg)</h4>
+<ul>
+<li>Pilsnermalt – 4.4 kg (64.9%)</li>
+<li>Spraymalt Pilsen Light – 1 kg (14.8%)</li>
+<li>Dark Crystal – 640 g (9.4%)</li>
+<li>Maris Otter – 640 g (9.4%)</li>
+<li>Black Malt – 100 g (1.5%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Perle – 23 g (60 min, 23 IBU)</li>
+<li>Perle – 9 g (30 min, 7 IBU)</li>
+<li>Saaz – 20 g (5 min, 2 IBU)</li>
+</ul>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Appelsinskall (bitter) – siste 5 min av kok</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP001 California Ale (76.5%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 10 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<ul>
+<li>Husk gjæring og klarning</li>
+<li>Appelsinskall tilsettes de siste 5 minuttene av koketiden</li>
+</ul>
+`
+},
+
+{
+    name: "Tadvin Saison",
+    year: 2018,
+    style: "Saison",
+
+    abv: "7.1%",
+    ibu: 36,
+    ebc: 12.4,
+    og: 1.063,
+    fg: 1.009,
+
+    notes: "Frisk og kompleks saison med sitruspreg, lett krydderkarakter og tørr avslutning.",
+
+    story: "En saison med klassisk maltbase kombinert med moderne humle og mulighet for sitrus- og kryddertilsetninger. Designet for å balansere tradisjonell stil med et mer eksperimentelt uttrykk. Navnet er gammelnorsk for Tøyen - hvor bryggeriet lå da dette ølet ble utviklet. Etiketten har et gammelt oversiktsbilde av botanisk hage. Her var det mye gøy å finne av historie, også spesielt for bryggeren. Ove Bjelke, som vokste opp på Austrått - som er samme område som bryggeren vokste opp, kjøpte hovedgården på Tøyen og bodde også der. En annen fun fact som kom fram i studiene til dette ølet er at Tadvin er satt sammen av Tad og Vin - gjødsel og eng. Godt gjødselt eng. Gjødsel er som kjent også det samme som dritt, og det viser seg at det engelske ordet Turd er det samme som det gammelnorske ordet Tad. Uten at den siste informasjonen har noe med ølet å gjøre - annet enn at kornet til malten sikkert ble godt gjødslet!",
+
+    ingredients: `
+<h4>MGL Tadvin Saison</h4>
+<p><strong>Saison</strong></p>
+<p>7.1% / 15.3 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (70% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 19 L | Koketid: 90 min</p>
+<p>Mash: 14.55 L | Sparge: 14.72 L | Totalt vann: 29.27 L</p>
+<p>Pre-boil volum: 26 L | SG: 1.050</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.063 | FG: 1.009 | IBU: 36 | BU/GU: 0.57 | EBC: 12.4</p>
+
+<h4>Mash</h4>
+<ul>
+<li>51 °C – 20 min</li>
+<li>66 °C – 10 min (oppvarming)</li>
+<li>66 °C – 50 min</li>
+<li>77 °C – 10 min (mash-out)</li>
+</ul>
+
+<h4>Malts (5.39 kg)</h4>
+<ul>
+<li>Pilsnermalt – 3.9 kg (72.4%)</li>
+<li>Hvetemalt – 1 kg (18.6%)</li>
+<li>Flaket hvete – 200 g (3.7%)</li>
+<li>Pale Crystal – 160 g (3%)</li>
+<li>Caramunich II – 130 g (2.4%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Tettnang – 25 g (90 min, 11 IBU)</li>
+<li>Tettnang – 25 g (60 min, 11 IBU)</li>
+<li>Citra – 10 g (15 min, 9 IBU)</li>
+<li>Citra – 15 g (5 min, 5 IBU)</li>
+</ul>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Ingefærrot (valgfritt)</li>
+<li>Limeskall (valgfritt)</li>
+<li>Sitronskall (valgfritt)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP566 Belgian Saison II (81.5%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 20 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<ul>
+<li>Ingefær og sitrusskall kan tilsettes i meskepose de siste 5 minuttene av koketiden</li>
+</ul>
+`
+},
+
+{
+    name: "Bösebrücke Berliner Weisse",
+    year: 2018,
+    style: "Berliner Weisse",
+
+    abv: "3.7%",
+    ibu: 0,
+    ebc: 5.7,
+    og: 1.035,
+    fg: 1.007,
+
+    notes: "Lett, frisk og syrlig hveteøl med høy drikkbarhet og lav bitterhet.",
+
+    story: "Inspirert av klassiske Berliner Weisse-øl med fokus på syrlighet og lett kropp. Ølet er syrnet med Lactobacillus før gjæring, noe som gir en ren og tydelig syreprofil. Dette ble brygget like før bryggmesterens første tur til Berlin. Etter å ha vært der å smakt ekte vare, kunne han konstatere at brygget var meget vellykket. Etiketten og navnet er inspirert av en en historisk bro som bryggeren husket fra en låt av David Bowie.",
+
+    ingredients: `
+<h4>MGL Bösebrücke Berliner Weisse</h4>
+<p><strong>Berliner Weisse</strong></p>
+<p>3.7% / 8.7 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Martha the Braumeister 20L (70% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 21 L | Koketid: 90 min</p>
+<p>Mash: 23 L | Sparge: 6.27 L | Totalt vann: 29.27 L</p>
+<p>Pre-boil volum: 26.67 L | SG: 1.030</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.035 | FG: 1.007 | IBU: 0 | EBC: 5.7</p>
+
+<h4>Mash</h4>
+<ul>
+<li>52 °C – 20 min</li>
+<li>62 °C – 50 min</li>
+<li>72 °C – 40 min</li>
+<li>78 °C – 10 min</li>
+</ul>
+
+<h4>Malts (3.25 kg)</h4>
+<ul>
+<li>Hvetemalt – 2 kg (61.5%)</li>
+<li>Pilsnermalt – 1.25 kg (38.5%)</li>
+</ul>
+
+<h4>Gjær og bakterier</h4>
+<ul>
+<li>Wyeast 5335 Lactobacillus Delbrueckii (67%)</li>
+<li>White Labs WLP001 California Ale (76.5%)</li>
+</ul>
+
+<h4>Fermentering</h4>
+<p>Primær: 18 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<ul>
+<li>Pitch Lactobacillus-starter ved ca. 37 °C</li>
+<li>Hold varm temperatur under syrning</li>
+<li>Syrningstid: ca. 10–20 timer (til ønsket syrenivå)</li>
+<li>Pitch deretter gjærstarter (WLP001)</li>
+</ul>
+`
+},
+
+{ name: "I wanna dance Wit somebody", year: 2018, style: "Wit" },
+
+{
+    name: "Piccadilly Bitter",
+    year: 2018,
+    style: "Best Bitter",
+
+    abv: "4.7%",
+    ibu: 37,
+    ebc: 22.5,
+    og: 1.050,
+    fg: 1.014,
+
+    notes: "Klassisk britisk bitter med balansert maltpreg, lett karamell, nøtteaktige toner og moderat bitterhet.",
+
+    story: "En hyllest til tradisjonelle engelske ales, inspirert av pubkulturen rundt Piccadilly. Fokus på autentiske britiske råvarer og klassisk balanse mellom malt og humle.",
+
+    ingredients: `
+<h4>MGL Piccadilly Bitter – Best Bitter</h4>
+<p><strong>Best Bitter</strong></p>
+<p>4.7% / 12.3 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (72% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 19 L | Koketid: 75 min</p>
+<p>Mash: 12.24 L | Sparge: 16.35 L | Totalt vann: 28.59 L</p>
+<p>Pre-boil volum: 26 L | SG: 1.039</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.050 | FG: 1.014 | IBU: 37 | BU/GU: 0.75 | EBC: 22.5</p>
+
+<h4>Mash</h4>
+<ul>
+<li>38 °C – 0 min</li>
+<li>66 °C – 60 min</li>
+<li>76 °C – 15 min</li>
+</ul>
+
+<h4>Malts (4.535 kg)</h4>
+<ul>
+<li>Maris Otter – 3.8 kg (83.8%)</li>
+<li>Flaket mais – 300 g (6.6%)</li>
+<li>Pale Crystal – 250 g (5.5%)</li>
+<li>Victory Malt – 130 g (2.9%)</li>
+<li>Black Malt – 55 g (1.2%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Goldings – 20 g (First Wort, 20 IBU)</li>
+<li>Challenger – 11.3 g (60 min, 12 IBU)</li>
+<li>Fuggles – 13 g (15 min, 5 IBU)</li>
+<li>Fuggles – 22 g (1 min, 1 IBU)</li>
+<li>Styrian Golding (Bobek) – 14 g (dry hop)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP002 English Ale (66.5%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 20 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<ul>
+<li>Mørke malttyper (Crystal og Black) tilsettes i siste del av mesken</li>
+<li>Ca. 4,7 g kalsium/gips kan tilsettes for å justere vannprofil mot London</li>
+<li>Bør brygges med hovedsakelig britiske ingredienser</li>
+<li><em>"The Piccadill of Ales"</em></li>
+</ul>
+`
+},
+
+{
+    name: "Mangohumle",
+    year: 2018,
+    style: "English IPA",
+
+    abv: "6.3%",
+    ibu: 44,
+    ebc: 12.8,
+    og: 1.059,
+    fg: 1.011,
+
+    notes: "Fruktig IPA med tydelig mango- og sitruspreg, kombinert med klassisk maltbase og moderat bitterhet.",
+
+    story: "Et forsøk på å kombinere klassisk IPA-struktur med tropisk fruktpreg. Mango, sitrus og moderne humler gir et friskt uttrykk, samtidig som maltbasen holder ølet godt forankret.",
+
+    ingredients: `
+<h4>MGL Mangohumle – English IPA</h4>
+<p><strong>English IPA</strong></p>
+<p>6.3% / 14.4 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (70% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 19 L | Koketid: 80 min</p>
+<p>Mash: 14.85 L | Sparge: 14.51 L | Totalt vann: 29.36 L</p>
+<p>Pre-boil volum: 26 L | SG: 1.046</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.059 | FG: 1.011 | IBU: 44 | BU/GU: 0.75 | EBC: 12.8</p>
+
+<h4>Mash</h4>
+<ul>
+<li>38 °C – 0 min</li>
+<li>51 °C – 20 min</li>
+<li>67 °C – 50 min</li>
+<li>78 °C – 10 min</li>
+</ul>
+
+<h4>Malts (5.5 kg)</h4>
+<ul>
+<li>Maris Otter – 2.7 kg (49.1%)</li>
+<li>Pilsnermalt – 2.5 kg (45.5%)</li>
+<li>Pale Crystal – 300 g (5.5%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Mosaic – 11 g (60 min, 18 IBU)</li>
+<li>Citra – 16 g (15 min, 15 IBU)</li>
+<li>Citra – 32 g (5 min, 12 IBU)</li>
+<li>Citra – 20 g (dry hop)</li>
+</ul>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Appelsinskall (fra 2 appelsiner, uten hvitt) – siste 5 min</li>
+<li>Sitronskall (fra 1 sitron) – siste 5 min</li>
+<li>Mangopuré – 1000 g (tilsettes etter stormgjæring)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP001 California Ale (76.5%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 18 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<p>Appelsin- og sitronskall tilsettes de siste 5 minuttene av koketiden i humlepose. Mangopuré og tørrhumle tilsettes etter stormgjæring (ca. én uke).</p>
+`
+},
+
+{
+    name: "Easy Livin’ 2.0",
+    year: 2019,
+    style: "American Pale Ale",
+
+    abv: "5.9%",
+    ibu: 39,
+    ebc: 14.2,
+    og: 1.056,
+    fg: 1.011,
+
+    notes: "Klassisk amerikansk pale ale med tydelig sitrus- og humlepreg, balansert mot en lett karamellmalt-base.",
+
+    story: "En videreutvikling av Easy Livin’, med fokus på klassisk amerikansk humleprofil (Cascade, Centennial og Chinook). Målet var en balansert, men humledrevet pale ale med god drikkbarhet. Easy Livin'-serien har fått navnene sine fordi de er ferdige all-grain ølsett, noe som gjør livet enkelt og leve da man selv ikke trenger å jobbe fram ei god oppskrift til formålet.",
+
+    ingredients: `
+<h4>MGL Easy Livin’ 2.0 – American Pale Ale</h4>
+<p><strong>American Pale Ale</strong></p>
+<p>5.9% / 13.8 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (70% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 19 L | Koketid: 80 min</p>
+<p>Mash: 14.18 L | Sparge: 14.98 L | Totalt vann: 29.16 L</p>
+<p>Pre-boil volum: 26 L | SG: 1.044</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.056 | FG: 1.011 | IBU: 39 | BU/GU: 0.70 | EBC: 14.2</p>
+
+<h4>Mash</h4>
+<ul>
+<li>38 °C – 0 min</li>
+<li>65 °C – 60 min</li>
+<li>78 °C – 5 min</li>
+</ul>
+
+<h4>Malts (5.25 kg)</h4>
+<ul>
+<li>Best Pale Malt – 5 kg (95.2%)</li>
+<li>Best Caramel Munich II – 250 g (4.8%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Chinook – 5 g (60 min, 8 IBU)</li>
+<li>Cascade – 28 g (15 min, 13 IBU)</li>
+<li>Centennial – 28 g (15 min, 18 IBU)</li>
+<li>Cascade – 28 g (0 min)</li>
+<li>Centennial – 28 g (0 min)</li>
+<li>Cascade – 28 g (dry hop)</li>
+<li>Centennial – 28 g (dry hop)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP001 California Ale (76.5%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 18 °C</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+`
+},
+
+{
+    name: "Sprett Saison",
+    year: 2020,
+    style: "Saison",
+
+    abv: "4.3%",
+    ibu: 39,
+    ebc: 8.7,
+    og: 1.040,
+    fg: 1.007,
+
+    notes: "Lett, frisk og svært tørr saison med høy bitterhet og god drikkbarhet. En lett og sprudlende saison med lav alkoholprosent, men høy smak. Designet for å være ekstremt leskende, med tydelig bitterhet og et tørt avslutning.",
+
+    story: "Dette ølet var inspirert av bryggmesterens førstefødtes ankomst, og navnet inspirert av et hopp vedkommende gjorde i forbindelse med en ultralyd-video - til stor glede for de vordende foreldrene. Dette er et Barsøl - som er det opprinnelige navnet på barsel - som altså stammer fra at man fra gammelt av brygget barns-øl til man ventet nyfødte.",
+
+    ingredients: `
+<h4>MGL Sprett – Saison</h4>
+<p><strong>Saison</strong></p>
+<p>4.3% / 9.9 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (70% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 19 L | Koketid: 90 min</p>
+<p>Mash: 9.21 L | Sparge: 19.44 L | Totalt vann: 28.65 L</p>
+<p>Pre-boil volum: 27 L | SG: 1.030</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.040 | FG: 1.007 | IBU: 39 | BU/GU: 0.98 | EBC: 8.7</p>
+
+<h4>Mash</h4>
+<ul>
+<li>51 °C – 10 min</li>
+<li>66 °C – 50 min</li>
+<li>78 °C – 5 min (mash-out)</li>
+</ul>
+
+<h4>Malts (3.41 kg)</h4>
+<ul>
+<li>Pilsnermalt – 2.5 kg (73.3%)</li>
+<li>Hvetemalt – 600 g (17.6%)</li>
+<li>Flaket hvete – 150 g (4.4%)</li>
+<li>Pale Crystal – 100 g (2.9%)</li>
+<li>Caramunich II – 60 g (1.8%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Tettnang – 20 g (90 min, 12 IBU)</li>
+<li>Tettnang – 20 g (60 min, 11 IBU)</li>
+<li>Fuggles – 30 g (15 min, 11 IBU)</li>
+<li>Fuggles – 30 g (5 min, 5 IBU)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP566 Belgian Saison II (81.5%)</p>
+
+<h4>Fermentering</h4>
+<p>Primær: 20 °C</p>
+
+<p>Karbonering: 2.5 CO₂-vol</p>
+
+<h4>Notater</h4>
+<p>Kan gjæres med fokus på å fremheve fruktighet i gjærprofilen.</p>
+`
+},
+
+{ 
+    name: "Porter Salut Britain", 
+    year: 2020, 
+    style: "Porter",
+    abv: "6.2%",
+    ibu: 32,
+    ebc: 71,
+    og: 1.062,
+    fg: 1.015,
+    onTap: true,
+
+    notes: "Fyldig porter med toner av kaffe og mørk sjokolade som er lett å like.",
+    story: `
+<p>Navnet henger sammen med at Brexit skjedde samtidig som ølet ble utviklet.</p>
+
+<p>Bildet på etiketten er inspirert av hattene portører ved engelske havner brukte for å bære tunge kasser på hodet.</p>
+
+<p>Bryggeren hadde en klar idé om hvordan en porter skulle smake. Etter å ha smakt flere varianter som var «nesten der», tok han utgangspunkt i kloner og oppskrifter på disse – og justerte dem videre i retning egne preferanser.</p>
+
+<p>Resultatet traff så godt som på første forsøk, og har siden blitt bryggerens favoritt blant egne oppskrifter.</p>
+
+<p><em>Best etter noen måneders lagring.</em></p>
+`,
+    ingredients: `
+<h4>MGL Porter Salut Britain</h4>
+<p><strong>American Porter</strong></p>
+<p>6.4% / 15.7 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Martha the Braumeister 20L (73% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 21 L | Koketid: 90 min</p>
+<p>Mash: 25 L | Sparge: 7.8 L | Totalt vann: 32.8 L</p>
+<p>Pre-boil volum: 28 L | SG: 1.053</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.064 | FG: 1.015 | IBU: 30 | BU/GU: 0.47 | EBC: 70.5</p>
+
+<h4>Mash</h4>
+<ul>
+<li>51 °C – 20 min</li>
+<li>67 °C – 50 min</li>
+<li>78 °C – 10 min</li>
+</ul>
+
+<h4>Malts (6 kg)</h4>
+<ul>
+<li>Maris Otter – 4.39 kg (73.2%)</li>
+<li>Crystal 150 EBC – 570 g (9.5%)</li>
+<li>Munich – 420 g (7%)</li>
+<li>Chocolate Malt – 280 g (4.7%)</li>
+<li>Black Malt – 200 g (3.3%)</li>
+<li>Low Colour Chocolate – 140 g (2.3%)</li>
+<li>Spraymalt Pilsen – 400 g</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Mosaic – 11.5 g (60 min, 16 IBU)</li>
+<li>Northern Brewer – 34 g (15 min, 14 IBU)</li>
+</ul>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Whirlfloc – 15 min</li>
+<li>Gjærnæring – 15 min</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>WLP007 Dry English Ale</p>
+<p>Starter: 1.6 L (335 milliarder celler)</p>
+
+<h4>Fermentering</h4>
+<p>18 °C – 14 dager</p>
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Vannprofil</h4>
+<p>Ca²⁺: 62 | Mg²⁺: 11 | Na⁺: 2</p>
+<p>Cl⁻: 50 | SO₄²⁻: 100 | HCO₃⁻: 38</p>
+`
+},
+
+{ name: "Cerveza Rapido Vamos", year: 2020, style: "Mexican Lager" },
+
+{ 
+    name: "BringeBeer", 
+    year: 2020, 
+    style: "Fruit Weizen",
+    abv: "6.2%",
+    ibu: 12,
+    ebc: 8,
+    og: 1.059,
+    fg: 1.012,
+
+    notes: "Frisk hveteøl som er farget - i dobbel forstand - av bringebær.",
+    story: "Denne er basert på et av bryggeriet første klasikkere - S5xW og spisset med bringebær.",
+    ingredients: `
+<h4>MGL BringeBeer Hefeweizen</h4>
+<p><strong>Weizen/Weissbier</strong></p>
+<p>6.2% / 14.5 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>Effektivitet:</strong> 75%</p>
+
+<h4>Batch</h4>
+<p>Volum: 22 L | Koketid: 90 min</p>
+<p>Mash: 15.5 L | Sparge: 15.0 L | Totalt vann: 30.5 L</p>
+<p>Pre-boil volum: 27 L | SG: 1.052</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.059 | FG: 1.012 | IBU: 12 | BU/GU: 0.20 | EBC: 7.7</p>
+
+<h4>Mash</h4>
+<ul>
+<li>40 °C – 15 min</li>
+<li>51 °C – 20 min</li>
+<li>67 °C – 50 min</li>
+<li>78 °C – 5 min (mash out)</li>
+</ul>
+
+<h4>Malts (5.75 kg)</h4>
+<ul>
+<li>Pilsner Malt (Heidelberg) – 2.75 kg (47.8%)</li>
+<li>Hvete Malt – 2.33 kg (40.5%)</li>
+<li>Flaked Oats – 420 g (7.3%)</li>
+<li>Rice Hulls – 250 g (4.4%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Goldings – 15 g (60 min, 8 IBU)</li>
+<li>Goldings – 12 g (30 min, 4 IBU)</li>
+</ul>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Bringebær – 1200 g (tilsatt i primary)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>WLP380 Hefeweizen IV Ale</p>
+
+<h4>Fermentering</h4>
+<p>23 °C – primary</p>
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<p>Pasteuriser frosne bær før bruk.</p>
+<p>Tilsett etter stormgjæring.</p>
+`
+},
+
+{ 
+    name: "Pils Under Press", 
+    year: 2022, 
+    style: "German Pils",
+    abv: "5.4%",
+    ibu: 37,
+    ebc: 6,
+    og: 1.047,
+    fg: 1.006,
+    onTap: true,
+
+    notes: "En klar og krisp pils.",
+    story: "Dette ølet ble til gjennom ny bryggeteknologi som gjør det mulig å brygge lager ved høyere temperatur og på kortere tid under trykk – eller “press”. Navnet Under Press spiller både på dette og på låta \"Under Pressure\" av David Bowie og Freddie Mercury. Etiketten er inspirert av dette, med bryggerens eget ansikt som utgangspunkt.",
+    ingredients: `
+<h4>MGL Pils Under Press v1</h4>
+<p><strong>German Pils</strong></p>
+<p>5.1% / 11.7 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>Effektivitet:</strong> 68.5%</p>
+
+<h4>Batch</h4>
+<p>Volum: 23 L | Koketid: 90 min</p>
+<p>Mash: 18.5 L | Sparge: 14.6 L | Totalt vann: 33.1 L</p>
+<p>Pre-boil volum: 29.5 L | SG: 1.040</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.047 | FG: 1.008 | IBU: 34 | BU/GU: 0.72 | EBC: 6.7</p>
+
+<h4>Mash</h4>
+<ul>
+<li>63 °C – 90 min</li>
+<li>78 °C – 10 min (mash out)</li>
+</ul>
+
+<h4>Malts (5 kg)</h4>
+<ul>
+<li>Pilsner Malt – 5 kg (100%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Perle – 30 g (60 min, 31 IBU)</li>
+<li>Hallertauer Mittelfrüh – 11 g (10 min, 3 IBU)</li>
+<li>Hallertauer Mittelfrüh – 15 g (0 min)</li>
+</ul>
+
+<h4>Vannjustering</h4>
+<ul>
+<li>CaCl₂ – 3 g</li>
+<li>MgSO₄ (Epsom) – 3.6 g</li>
+<li>CaSO₄ (Gypsum) – 3 g</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>Fermentis W-34/70 (4 pakker)</p>
+<p>478 milliarder celler | 1.79 mill celler/ml/°P</p>
+
+<h4>Fermentering</h4>
+<p>17 °C – 1 bar – 6 dager</p>
+<p>Diacetylrest: 22 °C – 1 bar – 3 dager</p>
+<p>Karbonering: 2.0 CO₂-vol</p>
+
+<h4>Vannprofil</h4>
+<p>Ca²⁺: 62 | Mg²⁺: 11 | Na⁺: 2</p>
+<p>Cl⁻: 50 | SO₄²⁻: 100 | HCO₃⁻: 38</p>
+
+<h4>Notater</h4>
+<p>Gjæret under trykk (1 bar) for renere profil og raskere gjæring.</p>
+`
+},
+
+{ 
+    name: "Knusk IPA", 
+    year: 2021, 
+    style: "Brut IPA",
+    abv: "8.1%",
+    ibu: 20,
+    ebc: 8,
+    og: 1.061,
+    fg: 0.999,
+
+    notes: "Kraftig IPA uten sødme, og dermed litt vel bitter.",
+    story: "Brut IPA var i vinden og denne ble brygget. Etiketten er inspirert av tjuken som heter Knusk, og som er opprinnelsen til uttrykket knusktørr. Resultatet ble ikke helt som forventet.",
+    ingredients: `
+<h4>MGL Knusk IPA</h4>
+<p><strong>Brut IPA</strong></p>
+<p>7.5% / 15 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>Effektivitet:</strong> 72%</p>
+
+<h4>Batch</h4>
+<p>Volum: 23 L | Koketid: 90 min</p>
+<p>Mash: 21.5 L | Sparge: 12.6 L | Totalt vann: 34.1 L</p>
+<p>Pre-boil volum: 29.5 L | SG: 1.048</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.061 | FG: 1.004 | IBU: 18 | BU/GU: 0.30 | EBC: 7.7</p>
+
+<h4>Mash</h4>
+<ul>
+<li>Innmesk: 38 °C</li>
+<li>63 °C – 85 min</li>
+<li>78 °C – 5 min (mash out)</li>
+</ul>
+
+<h4>Malts (6 kg)</h4>
+<ul>
+<li>Pilsner malt – 5 kg (83.3%)</li>
+<li>Flaket mais – 600 g (10%)</li>
+<li>Flaket havre – 200 g (3.3%)</li>
+<li>Flaket ris – 200 g (3.3%)</li>
+</ul>
+
+<h4>Tilsetninger (ekstrakt)</h4>
+<ul>
+<li>Golden Light DME – 300 g</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Mosaic – 20 g (5 min, 8 IBU)</li>
+<li>Citra – 45 g (hopstand 20 min, 8 IBU)</li>
+<li>Huell Melon – 25 g (hopstand 20 min, 2 IBU)</li>
+<li>Huell Melon – 75 g (tørrhumling, 2 dager)</li>
+<li>Citra – 25 g (tørrhumling, 2 dager)</li>
+</ul>
+
+<p><strong>Hopstand:</strong> 80 °C</p>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Whirlfloc – 15 min</li>
+<li>Gjærnæring – 15 min</li>
+<li>Ultra-Ferm (WLN4100) – 10 ml (primary)</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>WLP001 California Ale</p>
+<p>Starter: 1.5 L (355 milliarder celler)</p>
+
+<h4>Fermentering</h4>
+<p>20 °C – 14 dager</p>
+<p>Karbonering: 3.5 CO₂-vol</p>
+
+<h4>Notater</h4>
+<p>Tilsett Ultra-Ferm sammen med gjær (kan også tilsettes i mesk før 60 °C).</p>
+<p>Tilsett spraymalt etter at kok er startet for å unngå fastbrenning i Braumeister.</p>
+`
+},
+
+{ 
+    name: "Sur Flaten", 
+    year: 2021, 
+    style: "Saison",
+    abv: "5.5%",
+    ibu: 20,
+    ebc: 12,
+    og: 1.051,
+    fg: 1.009,
+
+    notes: "Klassisk saison-smaker sammen med syrlighet som heller mot steinfrukt. En fin kombinasjon.",
+    story: "Denne er basert på bryggeriets Flaten Saison. Til forskjell har denne blitt brygget med Philly Sour-gjær før Belle Saison, noe som førte til surøl uten bruk av bakterier. Det er derfor også noe bitterhet og smak fra nobelhumle. Etiketten er samme som hos Flaten Saison, bortsett fra farger og navn, og har familiens hyttetomt Flaten i bakgrunnen.",
+    ingredients: `
+<h4>MGL Sur Flaten</h4>
+<p><strong>Saison</strong></p>
+<p>5.5% / 14 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Martha the Braumeister 20L (73% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 21 L | Koketid: 90 min</p>
+<p>Mash: 25 L | Sparge: 7.0 L | Totalt vann: 32.0 L</p>
+<p>Pre-boil volum: 28 L | SG: 1.045</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.057 | FG: 1.015 | IBU: 19 | BU/GU: 0.33 | EBC: 11.6</p>
+
+<h4>Mash</h4>
+<ul>
+<li>Innmesk: 38 °C</li>
+<li>65 °C – 80 min</li>
+<li>77 °C – 10 min (mash out)</li>
+</ul>
+
+<h4>Malts (4.99 kg)</h4>
+<ul>
+<li>Pilsner Malt – 3.5 kg (68.8%)</li>
+<li>Wheat Malt – 1 kg (19.7%)</li>
+<li>Flaket hvete – 200 g (3.9%)</li>
+<li>Pale Crystal – 160 g (3.1%)</li>
+<li>Caramunich II – 130 g (2.6%)</li>
+</ul>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Dextrose – 100 g (i kok)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Tettnang – 13 g (90 min, 5 IBU)</li>
+<li>Tettnang – 13 g (60 min, 5 IBU)</li>
+<li>Fuggles – 25 g (15 min, 6 IBU)</li>
+<li>Fuggles – 30 g (5 min, 3 IBU)</li>
+</ul>
+
+<h4>Vannjustering</h4>
+<ul>
+<li>CaCl₂ – 2.9 g</li>
+<li>MgSO₄ (Epsom) – 4.7 g</li>
+<li>CaSO₄ (Gypsum) – 8.1 g</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>Philly Sour (2 pakker)</p>
+<p>Belle Saison (tilsettes etter syrning)</p>
+
+<h4>Fermentering</h4>
+<p>26 °C – 11 dager</p>
+<p>Diacetylrest: 28 °C – 3 dager</p>
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Vannprofil</h4>
+<p>Ca²⁺: 100 | Mg²⁺: 15 | Na⁺: 2</p>
+<p>Cl⁻: 50 | SO₄²⁻: 205 | HCO₃⁻: 38</p>
+
+<h4>Notater (Philly Sour)</h4>
+<ul>
+<li>Dextrose/glukose øker syrlighet</li>
+<li>Høy gjæringstemp (~25–26 °C) gir mer syre</li>
+<li>Pitch rate: 1–1.5 g/L (her brukt 2 pakker pga OG ~1.058)</li>
+<li>Tilsett Belle Saison etter 2–3 dager for saison-profil</li>
+</ul>
+`
+}
+,
+
+{ 
+    name: "Pure Pale Ale", 
+    year: 2023, 
+    style: "American Pale Ale",
+    abv: "4.9%",
+    ibu: 16,
+    ebc: 8,
+    og: 1.050,
+    fg: 1.016,
+
+    notes: "Tropisk frukt og citrus fra humlene!",
+    story: "Dette er i utgangspunktet Monkey Brews Plato Pale Ale, og ble valgt for å sikre en utprøvd og frisk øl til en hagefest for et storband og festivalen Jar Jazzfestival som MGL har hatt et mangeårig samarbeid med da det hadde tilhold i Oslo. Bandet, som bryggmesteren forøvrig spilte 1. tenor i, spilte den kjente låta av Prince - Purple Rain, som ga opphavet til navnet og etiketten. Funfact - det ble også skrevet om en tekst til låten som fulgte med dette designet.",
+    ingredients: `
+<h4>MGL Pure Pale Ale (Monkey Brew Plato Pale Ale) v1</h4>
+<p><strong>American Pale Ale</strong></p>
+<p>5.8% / 14.8 °P</p>
+
+<p><strong>Brygget av:</strong> Martha's Good & Lovely</p>
+<p><strong>System:</strong> Martha the Braumeister 20L (73% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 21 L | Koketid: 60 min</p>
+<p>Mash: 25 L | Sparge: 5.8 L | Totalt vann: 30.8 L</p>
+<p>Pre-boil volum: 26.3 L | SG: 1.053</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.060 | FG: 1.016 | IBU: 37 | BU/GU: 0.61 | EBC: 15.6</p>
+
+<h4>Mash</h4>
+<ul>
+<li>67 °C – 60 min</li>
+<li>77 °C – 5 min (mash out)</li>
+</ul>
+
+<h4>Malts (5.57 kg)</h4>
+<ul>
+<li>Chateau Pale Ale – 4.84 kg (86.9%)</li>
+<li>Cara Clair – 280 g (5%)</li>
+<li>Melano Light – 220 g (4%)</li>
+<li>Wheat Blanc – 170 g (3.1%)</li>
+<li>Cara Gold – 60 g (1.1%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Magnum – 3 g (60 min, 4 IBU)</li>
+<li>Centennial – 25 g (5 min, 8 IBU)</li>
+<li>Mosaic – 25 g (5 min, 10 IBU)</li>
+<li>Mosaic – 50 g (hopstand 20 min, 9 IBU)</li>
+<li>Centennial – 30 g (hopstand 20 min, 4 IBU)</li>
+<li>Cascade – 10 g (hopstand 20 min, 1 IBU)</li>
+<li>Centennial – 46 g (tørrhumling dag 6)</li>
+<li>Cascade – 23 g (tørrhumling dag 6)</li>
+<li>Mosaic – 23 g (tørrhumling dag 6)</li>
+</ul>
+
+<p><strong>Hopstand:</strong> 80 °C</p>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Whirlfloc – 15 min</li>
+<li>Gjærnæring – 15 min</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>Fermentis S-04 (2 pakker)</p>
+
+<h4>Fermentering</h4>
+<p>20 °C – 14 dager</p>
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Notater</h4>
+<p>Klassisk moderne pale ale med tydelig humleprofil fra Mosaic, Centennial og Cascade.</p>
+`
+},
+
+{ 
+    name: "Pils Beer With Me", 
+    year: 2023, 
+    style: "Pilsner",
+    abv: "4.2%",
+    ibu: 20,
+    ebc: 8,
+    og: 1.042,
+    fg: 1.011,
+
+    notes: "En pils med litt mer kropp.",
+    story: "Denne var på mange måter et forsøk hvor det både ble benyttet kveik, høy temperatur og trykk for å se hvor god lager som kunne brygges på kortest mulig tid. Resultatet ble en nokså cloudy pils til å begynne med, men etter nok måneder med lagring var den klar og delikat. Den måtte bare ha litt tid.",
+    ingredients: `
+<h4>Pils Beer With Me</h4>
+<p><strong>International-Style Pilsener</strong></p>
+<p>4.6% / 11.5 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> BrewZilla / RoboBrew 35L (70% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 20 L | Koketid: 60 min</p>
+<p>Mash: 20.3 L | Sparge: 7.2 L | Totalt vann: 27.5 L</p>
+<p>Pre-boil volum: 24.9 L | SG: 1.044</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.046 | FG: 1.011 | IBU: 20 | BU/GU: 0.43 | EBC: 7.7</p>
+
+<h4>Mash</h4>
+<ul>
+<li>65 °C – 60 min</li>
+<li>75 °C – 10 min (mash out)</li>
+</ul>
+
+<h4>Malts (4.53 kg)</h4>
+<ul>
+<li>Extra Pale Pilsner – 4.03 kg (89%)</li>
+<li>Munich – 362 g (8%)</li>
+<li>Biscuit – 136 g (3%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Saaz – 28.1 g (60 min, 16 IBU)</li>
+<li>Saaz – 15 g (10 min, 4 IBU)</li>
+<li>Saaz – 15 g (hopstand 15 min, 1 IBU)</li>
+</ul>
+
+<p><strong>Hopstand:</strong> 80 °C</p>
+
+<h4>Vannjustering</h4>
+<ul>
+<li>CaCl₂ – 3.3 g</li>
+<li>MgSO₄ (Epsom) – 0.5 g</li>
+<li>CaSO₄ (Gypsum) – 0.5 g</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>Kveik Yeastery K.22 Stalljen Kveik</p>
+
+<h4>Fermentering</h4>
+<ul>
+<li>21 °C – 1 dag</li>
+<li>20.5 °C – 1 dag</li>
+<li>21 °C – 1 dag</li>
+<li>23 °C – 0.5 dag</li>
+<li>24 °C – 1 dag</li>
+<li>25 °C – 1 dag</li>
+<li>25.5 °C – 1 dag</li>
+<li>26 °C – 7.5 dager</li>
+</ul>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Vannprofil</h4>
+<p>Ca²⁺: 55 | Mg²⁺: 2 | Na⁺: 6</p>
+<p>Cl⁻: 68 | SO₄²⁻: 25 | HCO₃⁻: 43</p>
+
+<h4>Notater</h4>
+<p>Kveik gjæret under trykk. Uten trykk anbefales gjæring under 25 °C.</p>
+`
+},
+
+{ 
+    name: "Lager '76", 
+    year: 2024, 
+    style: "Pilsner",
+    abv: "5.1%",
+    ibu: 19,
+    ebc: 9,
+    og: 1.051,
+    fg: 1.012,
+
+    notes: "Fresh Wort Kit fra Brewshops Project Brew. Vørter brygget av Austmann bryggeri. Tilsatt to pakker tørrgjær av typen NovaLager. Nesten ingen ting stemmer i denne oppskriften, da det bare var en duplisert oppskrift for å følge med på utgjæringen via Tilt (hydrometeret). OG på 1.055, FG 1.015.",
+    story: "Her ville bryggmesteren rett og slett prøve ut enkelheten av å benytte ferdig vørter. Det var en enkel bryggedag, og dette er noe jeg kommer til å gjenta i situasjoner der det ikke er tid til en hel bryggedag når behovet for et nytt øl melder seg. Etiketten er relativt selvforklarende for de som kjenner til klassisk norsk humor og Fleksnes-episoder spesifikt.",
+    ingredients: `
+<h4>MGL Lager '76 – for lageringeniører</h4>
+<p><strong>International-Style Pilsener</strong></p>
+<p>5.6% / 13.6 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> BrewZilla / RoboBrew 35L (70% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 20 L | Koketid: 60 min</p>
+<p>Mash: 22.9 L | Sparge: 5.3 L | Totalt vann: 28.2 L</p>
+<p>Pre-boil volum: 24.9 L | SG: 1.052</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.055 | FG: 1.012 | IBU: 18 | BU/GU: 0.33 | EBC: 8.5</p>
+
+<h4>Mash</h4>
+<ul>
+<li>65 °C – 60 min</li>
+<li>75 °C – 10 min (mash out)</li>
+</ul>
+
+<h4>Malts (5.39 kg)</h4>
+<ul>
+<li>Extra Pale Pilsner – 4.83 kg (89.6%)</li>
+<li>Munich – 410 g (7.6%)</li>
+<li>Biscuit – 150 g (2.8%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Saaz – 28.1 g (60 min, 14 IBU)</li>
+<li>Saaz – 15 g (10 min, 3 IBU)</li>
+<li>Saaz – 15 g (hopstand 15 min, 1 IBU)</li>
+</ul>
+
+<p><strong>Hopstand:</strong> 80 °C</p>
+
+<h4>Vannjustering</h4>
+<ul>
+<li>CaCl₂ – 3.3 g</li>
+<li>MgSO₄ (Epsom) – 0.5 g</li>
+<li>CaSO₄ (Gypsum) – 0.5 g</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>Nova Lager (2 pakker)</p>
+
+<h4>Fermentering</h4>
+<ul>
+<li>18 °C – 1 dag</li>
+<li>12 °C – 1 bar – 13 dager</li>
+</ul>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Vannprofil</h4>
+<p>Ca²⁺: 54 | Mg²⁺: 2 | Na⁺: 6</p>
+<p>Cl⁻: 66 | SO₄²⁻: 25 | HCO₃⁻: 43</p>
+
+<h4>Notater</h4>
+<p>Brygget med Fresh Wort Kit fra Brewshop / Project Brew (vørter produsert av Austmann bryggeri).</p>
+<p>Oppskriften er kun brukt som logg for gjæring (Tilt), og reflekterer ikke faktisk bryggeprosess.</p>
+<p>Faktiske målinger: OG 1.055, FG 1.015.</p>
+`
+},
+
+{ name: "Pils Panther", year: 2024, style: "Pilsner", 
+    abv: "5.1%",
+    ibu: 19,
+    ebc: 9,
+    og: 1.051,
+    fg: 1.012,
+
+    notes: "En klassisk, krisp og god pilsner.",
+    story: "Denne ble brygget til Jar Jazzfestival, som et sammarbeid mellom MGL og BBBrew (Bjørvika Business Band), og bryggeren fikk bare så vidt smakt på det selv, da fatet ble tømt på null komma svisj! Etiketten og navn ble inspirert av den legendariske temalåten til Pink Panter, som også var en del av repertoiret til storbandet, og hvor bryggmesteren selv hadde leadstemmen på sax.",
+ },
+
+{ 
+    name: "Wit is Hip!",
+    year: 2024,
+    style: "Wit",
+    abv: "6.4%",
+    ibu: 26,
+    ebc: 8.5,
+    og: 1.032,
+    fg: 1.013,
+
+    notes: "Frisk, klassisk wit-smak, med god tilstedeværelse av sitrus. Leskedrikk!",
+    story: "Dette er i utgangspunktet det samme ølet som et av bryggeriets favoritter og klassikere Witty Peach, og ble re-brandet for anledningen. Anledningen var et samarbeid med Bjørvika Business Brew, og etikett og navn spiller på låten What is Hip og platen Tower of Power av samme band, hvor låten opprinnelig er og som spilles av Bjørvika Business Band.",
+    ingredients: `
+<h4>MGL Wit is Hip</h4>
+<p><strong>Fruit and Spice Beer</strong></p>
+<p>6.4% / 15.1 °P</p>
+
+<p><strong>Brygget av:</strong> Martin Skei</p>
+<p><strong>System:</strong> Imported (70% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 19 L | Koketid: 90 min</p>
+<p>Mash: 14.15 L | Sparge: 18.04 L | Totalt vann: 32.19 L</p>
+<p>Pre-boil volum: 28 L | SG: 1.045</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.062 | FG: 1.013 | IBU: 26 | BU/GU: 0.42 | EBC: 8.5</p>
+
+<h4>Mash</h4>
+<ul>
+<li>38 °C – innmesk</li>
+<li>51 °C – 20 min</li>
+<li>67 °C – 50 min</li>
+<li>78 °C – 10 min</li>
+</ul>
+
+<h4>Malts (5.24 kg)</h4>
+<ul>
+<li>Pilsnermalt – 2.5 kg (47.7%)</li>
+<li>Hvetemalt – 2.3 kg (43.9%)</li>
+<li>Torrefied wheat – 440 g (8.4%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Tettnang – 52.8 g (80 min, 21 IBU)</li>
+<li>Tettnang – 23.4 g (15 min, 4 IBU)</li>
+<li>Mosaic – 13.1 g (1 min, 1 IBU)</li>
+</ul>
+
+<h4>Krydder & tilsetninger</h4>
+<ul>
+<li>Appelsinskall (uten hvit del) – 40 g (5 min)</li>
+<li>Sitronskall – 30 g (5 min)</li>
+<li>Aprikoseekstrakt – 1000 g (sekundær)</li>
+</ul>
+
+<h4>Vannjustering</h4>
+<ul>
+<li>CaCl₂ – 5.3 g</li>
+<li>Epsom salt – 4.7 g</li>
+<li>Gypsum – 5.4 g</li>
+</ul>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Whirlfloc – 15 min</li>
+<li>Gjærnæring – 15 min</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>White Labs WLP400 Belgian Wit</p>
+
+<h4>Starter</h4>
+<p>1.3 L | 292 milliarder celler</p>
+
+<h4>Fermentering</h4>
+<p>20 °C – 11 dager</p>
+<p>Diacetylrast: 23 °C – 3 dager</p>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Vannprofil</h4>
+<p>Ca: 100 | Mg: 15 | Na: 2 | Cl: 85 | SO₄: 157 | HCO₃: 38</p>
+
+<h4>Notater</h4>
+<p>Appelsin- og sitronskall tilsettes de siste 5 minuttene av koketiden.</p>
+<p>Aprikospuré tilsettes etter primærgjæring.</p>
+`
+},
+
+{ 
+    name: "Tune Your Oud", 
+    year: 2024, 
+    style: "Oud Bruin",
+    abv: "6.2%",
+    ibu: 21,
+    ebc: 44,
+    og: 1.059,
+    fg: 1.014,
+
+    notes: "PhillySour møter Trappist-munker og gir dette Oud Bruin-ølet et særpreg som hinter mot steinfrukt og vingummi.",
+    story: "Etiketten og navnet spiller på øltypen Oud Bruin, instrumentet Oud, og at det må stemmes dersom det ikke skal være surt. Heldigvis stemmes ikke denne, og ølet beholder sin behagelige surhet akkurat slik det skal.",
+    ingredients: `
+<h4>MGL Tune Your Oud – It’s Been Bruin' Sour v1</h4>
+<p><strong>Oud Bruin</strong></p>
+<p>9.1% / 19.6 °P</p>
+
+<p><strong>Brygget av:</strong> Martha's Good & Lovely</p>
+<p><strong>System:</strong> Martha the Braumeister 20L (73% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 21 L | Koketid: 65 min</p>
+<p>Mash: 25 L | Sparge: 7.2 L | Totalt vann: 32.2 L</p>
+<p>Pre-boil volum: 26.6 L | SG: 1.063</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.081 | FG: 1.012 | IBU: 21 | BU/GU: 0.26 | EBC: 44</p>
+
+<h4>Mash</h4>
+<ul>
+<li>63 °C – 60 min</li>
+<li>70 °C – 15 min</li>
+<li>78 °C – 10 min (mash out)</li>
+</ul>
+
+<h4>Malts (6.96 kg)</h4>
+<ul>
+<li>Pilsen – 3.4 kg (45.6%)</li>
+<li>Munich – 2.5 kg (33.5%)</li>
+<li>Biscuit – 240 g (3.2%)</li>
+<li>Wheat Malt – 240 g (3.2%)</li>
+<li>Special B – 240 g (3.2%)</li>
+<li>Crystal 60L – 240 g (3.2%)</li>
+<li>Carafa Special III – 100 g (1.3%)</li>
+</ul>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Dextrose – 500 g (i kok)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Styrian Goldings (Celia) – 75.9 g (60 min, 21 IBU)</li>
+</ul>
+
+<h4>Vannjustering</h4>
+<ul>
+<li>CaCl₂ – 2.9 g</li>
+<li>MgSO₄ (Epsom) – 0.6 g</li>
+<li>CaSO₄ (Gypsum) – 0.6 g</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>Philly Sour (2 pakker)</p>
+<p>WLP500 Trappist Ale – 70 ml</p>
+
+<h4>Fermentering</h4>
+<ul>
+<li>Philly Sour – 25 °C – 4 dager</li>
+<li>Belgisk gjær – 20 °C – 8 dager</li>
+<li>Diacetylrest – 23 °C – 2 dager</li>
+</ul>
+
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Vannprofil</h4>
+<p>Ca²⁺: 45 | Mg²⁺: 2 | Na⁺: 2</p>
+<p>Cl⁻: 49 | SO₄²⁻: 24 | HCO₃⁻: 38</p>
+
+<h4>Notater</h4>
+<p>Hybridgjæring med Philly Sour for syreproduksjon, etterfulgt av belgisk gjær for kompleksitet.</p>
+<p>Kombinerer klassisk Oud Bruin maltprofil med moderne sour-teknikk.</p>
+`
+},
+
+{ 
+    name: "Mr. IPA", 
+    year: 2025, 
+    style: "English IPA",
+    abv: "5.8%",
+    ibu: 39,
+    ebc: 8,
+    og: 1.060,
+    fg: 1.016,
+
+    notes: "En sommerlig og behagelig IPA brygget med det som beskrives som en unik aromahumle kjent for sin komplekse, fruktige smak, med aromaer av mandarin, kokosnøtt, tropisk frukt og steinfrukt, med hint av sedertre, mynte og krem. Og dette stemmer godt med bryggerens inntrykk",
+    story: "Dette var ett av ølene som ble brygget i samarbeidet mellom bryggeriet, Bjørvika Business Band og Jar Jazzfestival. Etikett og navn spiller på en låt bandet spiller som heter Mr. JPA, at dette er en IPA og at den dermed har tilknytning til imperialistisk India. Ønsket var å lage en IPA som selv de som ikke er så glad i stilen skulle like en sommerkveld på hagefest.",
+    ingredients: `
+<h4>Mr. IPA v1</h4>
+<p><strong>English IPA</strong></p>
+<p>5.1% / 13.7 °P</p>
+
+<p><strong>Brygget av:</strong> Martha's Good & Lovely</p>
+<p><strong>System:</strong> Martha the Braumeister 20L (66.7% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 21 L | Koketid: 60 min</p>
+<p>Mash: 25 L | Sparge: 5.8 L | Totalt vann: 30.8 L</p>
+<p>Pre-boil volum: 26.3 L | SG: 1.048</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.055 | FG: 1.016 | IBU: 40 | BU/GU: 0.72 | EBC: 7.5</p>
+
+<h4>Mash</h4>
+<ul>
+<li>Innmesk: 40 °C</li>
+<li>66 °C – 60 min</li>
+<li>76 °C – 10 min (mash out)</li>
+</ul>
+
+<h4>Malts (5.61 kg)</h4>
+<ul>
+<li>Pilsen – 5.3 kg (94.5%)</li>
+<li>Caramel Pils – 250 g (4.5%)</li>
+<li>Syremalt – 60 g (1.1%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Sabro – 13.3 g (60 min, 19 IBU)</li>
+<li>Sabro – 100 g (hopstand 20 min @ 82 °C, 21 IBU)</li>
+<li>Sabro – 100 g (tørrhumling, 3 dager)</li>
+</ul>
+
+<p><strong>Hopstand:</strong> 82 °C</p>
+
+<h4>Vannjustering</h4>
+<ul>
+<li>Gypsum – 2.8 g</li>
+</ul>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Whirlfloc – 15 min</li>
+<li>Gjærnæring – 15 min</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>Fermentis US-05</p>
+
+<h4>Fermentering</h4>
+<p>18.3 °C – 14 dager</p>
+<p>Karbonering: 2.3 CO₂-vol</p>
+
+<h4>Notater</h4>
+<p>Mash pH: 5.35 etter tilsetning av gypsum.</p>
+
+<p>Etter kok: 20 min whirlpool ned til 82 °C, deretter 20 min med humle (82 → 74 °C). Totalt ca. 45 min før nedkjøling.</p>
+
+<p>Tørrhumling tilsettes dag 3 under aktiv gjæring for biotransformasjon, som bidrar til tørrere finish (FG ~1.013).</p>
+
+<p>Etter gjæring kjøles ølet gradvis ned med 2–3 dumpinger av gjær/humle, før lagring ved ca. 3.3 °C i 10 dager.</p>
+
+<p><strong>Smaksprofil:</strong> Lett maltbase som lar Sabro-humlen dominere med tropisk frukt, sitrus, samt subtile toner av sedertre og krem.</p>
+`
+},
+
+{ 
+    name: "Märzen Good & Lovely", 
+    year: 2025, 
+    style: "Märzen",
+    abv: "5.9%",
+    ibu: 21,
+    ebc: 24,
+    og: 1.060,
+    fg: 1.015,
+
+    notes: "En maltrik og mørkere Märzen enn det som er vanlig i dag. Best servert i større seidel og inntas helst i større slurker, som øltørsteslukker på senhøsten.",
+    story: "Oppskriften er i hovedsak inspirert av Gordon Strong sin Traditional Oktoberfest fra boken Modern Homebrew Recipes. Basemaltmengden er justert ned på grunn av begrensninger i bryggesystemet (Speidel Braumeister 20L Plus). Original gravity (G) er kompensert med DME.",
+    ingredients: `
+<h4>MGL Märzen Good & Lovely v1</h4>
+<p><strong>Märzen</strong></p>
+<p>6.0% / 15 °P</p>
+
+<p><strong>Brygget av:</strong> Martha's Good & Lovely</p>
+<p><strong>System:</strong> Martha the Braumeister 20L (68% effektivitet)</p>
+
+<h4>Batch</h4>
+<p>Volum: 21 L | Koketid: 60 min</p>
+<p>Mash: 25 L | Sparge: 9.2 L | Totalt vann: 34.2 L</p>
+<p>Pre-boil volum: 28.4 L | SG: 1.054</p>
+
+<h4>Vitals</h4>
+<p>OG: 1.061 | FG: 1.015 | IBU: 21 | BU/GU: 0.34 | EBC: 24</p>
+
+<h4>Mash</h4>
+<ul>
+<li>Basemalt: 67 °C – 20 min</li>
+<li>Spesialmalt: 67 °C – 60 min</li>
+<li>76 °C – 15 min (mash out)</li>
+</ul>
+
+<h4>Malts (6.43 kg)</h4>
+<ul>
+<li>Vienna – 2.2 kg (34.2%)</li>
+<li>Munich – 1.7 kg (26.4%)</li>
+<li>Pilsen – 1.3 kg (20.2%)</li>
+<li>Melanoidin – 450 g (7%)</li>
+<li>Munich Dark – 450 g (7%)</li>
+<li>Caramel Aromatic – 220 g (3.4%)</li>
+<li>Caramel Munich III – 110 g (1.7%)</li>
+</ul>
+
+<h4>Humle</h4>
+<ul>
+<li>Hallertauer Mittelfrüh – 41.1 g (60 min, 14 IBU)</li>
+<li>Tettnang – 39.9 g (20 min, 7 IBU)</li>
+</ul>
+
+<h4>Vannjustering</h4>
+<ul>
+<li>CaCl₂ – 2.6 g</li>
+<li>CaSO₄ (Gypsum) – 1.5 g</li>
+</ul>
+
+<h4>Tilsetninger</h4>
+<ul>
+<li>Whirlfloc – 15 min</li>
+<li>Gjærnæring – 15 min</li>
+</ul>
+
+<h4>Gjær</h4>
+<p>WLP833 German Bock Lager</p>
+<p>Starter: 3.3 L (633 milliarder celler)</p>
+
+<h4>Fermentering</h4>
+<p>10 °C – 14 dager</p>
+<p>Lagring: 1 °C – 90 dager</p>
+<p>Karbonering: 2.4 CO₂-vol</p>
+
+<h4>Vannprofil</h4>
+<p>Ca²⁺: 45 | Mg²⁺: 1 | Na⁺: 2</p>
+<p>Cl⁻: 41 | SO₄²⁻: 30 | HCO₃⁻: 38</p>
+
+<h4>Notater</h4>
+<p>Klassisk Märzen med kompleks maltprofil fra Vienna og Munich, støttet av melanoidinmalt for dybde og fylde.</p>
+<p>Lang kald lagering for å utvikle rundhet og ren profil.</p>
+`
+},
+];
+
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
