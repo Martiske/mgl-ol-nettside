@@ -1,4 +1,5 @@
 const manualMatches = {
+    "Rett i Vranga Premium": "Rett i Vranga.jpg",
     "Pils Under Press": "Pils Under Press blue um ba.jpg",
     "Sur Flaten": "Flaten Surøl.jpg",
     "SvinPils": "SvinPils2.jpg",
