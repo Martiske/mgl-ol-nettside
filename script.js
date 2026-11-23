@@ -295,7 +295,7 @@ function createBeerCard(beer, compact = false) {
 
     card.innerHTML = `
         <img src="${img}" alt="${beer.name}" onerror="this.src='${fallbackImage}'">
-        <h3>${beer.batchRecord ? `Batch #${beer.batchRecord.batch} — ${beer.name}` : beer.name}</h3>
+        <h3>${beer.name}</h3>
         <p class="${compact ? "beer-card-style" : "beer-style"}">${beer.style || ""}</p>
         <p class="${compact ? "beer-card-abv" : "beer-abv"}">${beer.abv || ""}${beer.brewedOn ? ` · Brygget ${formatBrewDate(beer.brewedOn)}` : ""}</p>
     `;
@@ -456,9 +456,7 @@ function updateView() {
 }
 
 function openModal(beer, img) {
-    modalTitle.textContent = beer.batchRecord
-        ? `Batch #${beer.batchRecord.batch} — ${beer.name}`
-        : beer.name;
+    modalTitle.textContent = beer.name;
     modalImage.src = img;
     modalImage.alt = beer.name;
     modalImage.onerror = () => {
@@ -471,7 +469,7 @@ function openModal(beer, img) {
     let details;
     if (beer.batchRecord) {
         const batch = beer.batchRecord;
-        details = `<p><strong>Batch #${batch.batch}</strong> · Brygget <span class="modal-year" data-year="${beer.year}">${formatBrewDate(batch.brewedOn)}</span></p>`;
+        details = `<p><strong>Brygget</strong> <span class="modal-year" data-year="${beer.year}">${formatBrewDate(batch.brewedOn)}</span> · Brewfather batch #${batch.batch}</p>`;
         details += `<p>ABV: ${batch.abv} | IBU: ${batch.ibu} | EBC: ${batch.ebc} | OG: ${batch.og} | FG: ${batch.fg}</p>`;
         if (batch.status) details += `<p>Status: ${batch.status}</p>`;
     } else {
@@ -502,7 +500,7 @@ function openModal(beer, img) {
             const brewedDate = formatBrewDate(batch.brewedOn);
             const batchName = batch.label ? ` – ${batch.label}` : "";
             const status = batch.status ? ` <span>(${batch.status})</span>` : "";
-            return `<li><strong>Batch #${batch.batch}${batchName} — ${brewedDate}</strong>${status}<br>${batch.abv} ABV · ${batch.ibu} IBU · ${batch.ebc} EBC · OG ${batch.og} · FG ${batch.fg}</li>`;
+            return `<li><strong>${brewedDate} — Brewfather batch #${batch.batch}${batchName}</strong>${status}<br>${batch.abv} ABV · ${batch.ibu} IBU · ${batch.ebc} EBC · OG ${batch.og} · FG ${batch.fg}</li>`;
         }).join("")}</ol>`;
     }
 
