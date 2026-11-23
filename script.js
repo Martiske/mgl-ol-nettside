@@ -166,7 +166,8 @@ let activeStyle = "";
 let activeYear = null;
 let activeSort = "year-desc";
 
-const styles = [...new Set(beers.map((beer) => beer.style).filter(Boolean))].sort();
+const publishedBeers = beers.filter((beer) => beer.published !== false);
+const styles = [...new Set(publishedBeers.map((beer) => beer.style).filter(Boolean))].sort();
 const sortOptions = [
     { value: "year-desc", label: "Nyeste først" },
     { value: "year-asc", label: "Eldste først" },
@@ -270,7 +271,7 @@ function renderBeers(list) {
 function renderOnTap() {
     onTapGrid.innerHTML = "";
 
-    beers
+    publishedBeers
         .filter((beer) => beer.onTap)
         .forEach((beer) => {
             onTapGrid.appendChild(createBeerCard(beer, true));
@@ -360,7 +361,7 @@ function renderFilterTags() {
 
 function filterAndSortBeers() {
     const search = searchInput.value.trim().toLowerCase();
-    let filtered = [...beers];
+    let filtered = [...publishedBeers];
 
     if (activeYear !== null) {
         filtered = filtered.filter((beer) => beer.year === activeYear);
