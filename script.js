@@ -1,8 +1,17 @@
 const manualMatches = {
     "Rett i Vranga Premium": "Rett i Vranga.jpg",
     "Rett i Vranga": "Tina 40 Rett i Vranga.jpg",
+    "Skei Kölsch": "Skei Kolsch.jpg",
+    "Gå Sjøl": "Ga Sjoel.jpg",
+    "SaisÅsta": "SaisAasta.jpg",
+    "Jólablot": "Jolablot.jpg",
+    "Bösebrücke Berliner Weisse": "Bosebrucke Berliner Weisse.jpg",
+    "Märzen Good & Lovely": "Marzen Good Lovely.jpg",
+    "Flaten Sæterøl": "Flaten Saeterol.jpg",
+    "Goð Jøl": "God Jol.jpg",
+    "Øl som Fortjent": "Ol som Fortjent.jpg",
     "Pils Under Press": "Pils Under Press blue um ba.jpg",
-    "Sur Flaten": "Flaten Surøl.jpg",
+    "Sur Flaten": "Flaten Surol.jpg",
     "SvinPils": "SvinPils2.jpg",
     "Witty Peach": "Witty Peach V. 3.1.jpg",
     "TCJB (Tiger City Jungle Brew)": "TCJBSvart.jpg",
@@ -71,14 +80,14 @@ const beerPhotos = {
         { file: "Easy livin' glass keg label.jpeg", caption: "Glass og fatetikett" }
     ],
     "Gå Sjøl": [
-        { file: "Gå sjøl gårdsøl glass.jpeg", caption: "Glass" },
-        { file: "Gå sjøl gårdsøl glass label.jpeg", caption: "Glass og etikett" }
+        { file: "Ga Sjoel gardsoel glass.jpeg", caption: "Glass" },
+        { file: "Ga Sjoel gardsoel glass label.jpeg", caption: "Glass og etikett" }
     ],
     "Einfer": [
         { file: "Einfer bottles.jpeg", caption: "Flasker" }
     ],
     "Goð Jøl": [
-        { file: "God jöl glass bottle.jpeg", caption: "Glass og flaske" }
+        { file: "God Jol glass bottle.jpeg", caption: "Glass og flaske" }
     ],
     "Quark-Gluon Plasma": [
         { file: "Quark-gluon plasma bottle.jpeg", caption: "Flaske" },
@@ -91,14 +100,14 @@ const beerPhotos = {
         { file: "APA (definite singular) glass label.jpeg", caption: "Glass og etikett" }
     ],
     "SaisÅsta": [
-        { file: "SaisÅsta glass label.jpeg", caption: "Glass og etikett" }
+        { file: "SaisAasta glass label.jpeg", caption: "Glass og etikett" }
     ],
     "Biscuit de Garde": [
         { file: "Biscuit de garde glass.jpeg", caption: "Glass" },
         { file: "Biscuit de garde glass bottle.jpeg", caption: "Glass og flaske" }
     ],
     "Flaten Sæterøl": [
-        { file: "Flaten sæterøl glass label.jpeg", caption: "Glass og etikett" }
+        { file: "Flaten Saeterol glass label.jpeg", caption: "Glass og etikett" }
     ],
     "All I Want for Christmas is Brew": [
         { file: "All I want for christmas is brew glass bottle.jpeg", caption: "Glass og flaske" }
