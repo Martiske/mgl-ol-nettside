@@ -161,8 +161,8 @@ const beerPhotos = {
         { file: "Wit is hip!, Pink panther festival tap.jpeg", caption: "Festivalservering sammen med Pils Panther" }
     ],
     "Märzen Good & Lovely": [
-        { file: "Martha's good & lovely märzen glass.jpeg", caption: "Glass" },
-        { file: "Martha's good & lovely märzen glass label.jpeg", caption: "Glass og etikett" }
+        { file: "Marzen Good Lovely glass.jpeg", caption: "Glass" },
+        { file: "Marzen Good Lovely glass label.jpeg", caption: "Glass og etikett" }
     ]
 };
 
