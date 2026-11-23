@@ -134,6 +134,9 @@ const beerPhotos = {
         { file: "Porter salut glass.jpeg", caption: "Glass" },
         { file: "Porter salut after eight.jpeg", caption: "Servering" }
     ],
+    "Rett i Vranga Premium": [
+        { file: "Rett i Vranga Premium servering.jpeg", caption: "Servering" }
+    ],
     "Rett i Vranga": [
         { file: "Rett i Vranga servering.jpeg", caption: "Servering" }
     ],
