@@ -192,6 +192,24 @@ let activeYear = null;
 let activeSort = "year-desc";
 
 const publishedBeers = beers.filter((beer) => beer.published !== false);
+const catalogBeers = publishedBeers.flatMap((beer) => {
+    const records = batchHistory.filter((batch) => batch.beer === beer.name);
+    if (!records.length) {
+        return [beer];
+    }
+
+    return records.map((batchRecord) => ({
+        ...beer,
+        year: Number(batchRecord.brewedOn.slice(0, 4)),
+        abv: batchRecord.abv,
+        ibu: batchRecord.ibu,
+        ebc: batchRecord.ebc,
+        og: Number(batchRecord.og),
+        fg: Number(batchRecord.fg),
+        brewedOn: batchRecord.brewedOn,
+        batchRecord
+    }));
+});
 const styles = [...new Set(publishedBeers.map((beer) => beer.style).filter(Boolean))].sort();
 const sortOptions = [
     { value: "year-desc", label: "Nyeste først" },
@@ -206,6 +224,15 @@ function findImage(beerName) {
     }
 
     return `labels/${beerName}.jpg`;
+}
+
+function formatBrewDate(dateString) {
+    return new Intl.DateTimeFormat("nb-NO", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        timeZone: "UTC"
+    }).format(new Date(`${dateString}T00:00:00Z`));
 }
 
 function photoPath(fileName) {
@@ -268,9 +295,9 @@ function createBeerCard(beer, compact = false) {
 
     card.innerHTML = `
         <img src="${img}" alt="${beer.name}" onerror="this.src='${fallbackImage}'">
-        <h3>${beer.name}</h3>
+        <h3>${beer.batchRecord ? `Batch #${beer.batchRecord.batch} — ${beer.name}` : beer.name}</h3>
         <p class="${compact ? "beer-card-style" : "beer-style"}">${beer.style || ""}</p>
-        <p class="${compact ? "beer-card-abv" : "beer-abv"}">${beer.abv || ""}</p>
+        <p class="${compact ? "beer-card-abv" : "beer-abv"}">${beer.abv || ""}${beer.brewedOn ? ` · Brygget ${formatBrewDate(beer.brewedOn)}` : ""}</p>
     `;
 
     card.addEventListener("click", () => openModal(beer, img));
@@ -386,7 +413,7 @@ function renderFilterTags() {
 
 function filterAndSortBeers() {
     const search = searchInput.value.trim().toLowerCase();
-    let filtered = [...publishedBeers];
+    let filtered = [...catalogBeers];
 
     if (activeYear !== null) {
         filtered = filtered.filter((beer) => beer.year === activeYear);
@@ -395,7 +422,8 @@ function filterAndSortBeers() {
     if (search) {
         filtered = filtered.filter((beer) =>
             beer.name.toLowerCase().includes(search) ||
-            (beer.style && beer.style.toLowerCase().includes(search))
+            (beer.style && beer.style.toLowerCase().includes(search)) ||
+            (beer.batchRecord && `batch ${beer.batchRecord.batch}`.includes(search))
         );
     }
 
@@ -404,19 +432,19 @@ function filterAndSortBeers() {
     }
 
     if (activeSort === "year-desc") {
-        filtered.sort((a, b) => b.year - a.year);
+        filtered.sort((a, b) => b.year - a.year || (b.brewedOn || "").localeCompare(a.brewedOn || ""));
     }
 
     if (activeSort === "year-asc") {
-        filtered.sort((a, b) => a.year - b.year);
+        filtered.sort((a, b) => a.year - b.year || (a.brewedOn || "").localeCompare(b.brewedOn || ""));
     }
 
     if (activeSort === "abv-desc") {
-        filtered.sort((a, b) => (parseFloat(b.abv) || 0) - (parseFloat(a.abv) || 0));
+        filtered.sort((a, b) => (parseFloat(b.abv) || 0) - (parseFloat(a.abv) || 0) || b.year - a.year);
     }
 
     if (activeSort === "abv-asc") {
-        filtered.sort((a, b) => (parseFloat(a.abv) || 0) - (parseFloat(b.abv) || 0));
+        filtered.sort((a, b) => (parseFloat(a.abv) || 0) - (parseFloat(b.abv) || 0) || b.year - a.year);
     }
 
     return filtered;
@@ -428,7 +456,9 @@ function updateView() {
 }
 
 function openModal(beer, img) {
-    modalTitle.textContent = beer.name;
+    modalTitle.textContent = beer.batchRecord
+        ? `Batch #${beer.batchRecord.batch} — ${beer.name}`
+        : beer.name;
     modalImage.src = img;
     modalImage.alt = beer.name;
     modalImage.onerror = () => {
@@ -438,11 +468,19 @@ function openModal(beer, img) {
 
     modalDesc.innerHTML = `<span class="modal-style" data-style="${beer.style || ""}">${beer.style || ""}</span>`;
 
-    let details = `<p>Brygget: <span class="modal-year" data-year="${beer.year}">${beer.year}</span>`;
-    if (beer.abv) details += ` | ABV: ${beer.abv}`;
-    if (beer.ibu) details += ` | IBU: ${beer.ibu}`;
-    if (beer.ebc) details += ` | EBC: ${beer.ebc}`;
-    details += "</p>";
+    let details;
+    if (beer.batchRecord) {
+        const batch = beer.batchRecord;
+        details = `<p><strong>Batch #${batch.batch}</strong> · Brygget <span class="modal-year" data-year="${beer.year}">${formatBrewDate(batch.brewedOn)}</span></p>`;
+        details += `<p>ABV: ${batch.abv} | IBU: ${batch.ibu} | EBC: ${batch.ebc} | OG: ${batch.og} | FG: ${batch.fg}</p>`;
+        if (batch.status) details += `<p>Status: ${batch.status}</p>`;
+    } else {
+        details = `<p>Brygget: <span class="modal-year" data-year="${beer.year}">${beer.year}</span>`;
+        if (beer.abv) details += ` | ABV: ${beer.abv}`;
+        if (beer.ibu) details += ` | IBU: ${beer.ibu}`;
+        if (beer.ebc) details += ` | EBC: ${beer.ebc}`;
+        details += "</p>";
+    }
 
     if (beer.notes) {
         details += `<p><strong>Smak:</strong> ${beer.notes}</p>`;
@@ -460,14 +498,8 @@ function openModal(beer, img) {
         .filter((batch) => batch.beer === beer.name)
         .sort((a, b) => a.brewedOn.localeCompare(b.brewedOn));
     if (beerBatches.length) {
-        const dateFormatter = new Intl.DateTimeFormat("nb-NO", {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-            timeZone: "UTC"
-        });
         details += `<h4>Batchhistorikk</h4><ol class="batch-history">${beerBatches.map((batch) => {
-            const brewedDate = dateFormatter.format(new Date(`${batch.brewedOn}T00:00:00Z`));
+            const brewedDate = formatBrewDate(batch.brewedOn);
             const batchName = batch.label ? ` – ${batch.label}` : "";
             const status = batch.status ? ` <span>(${batch.status})</span>` : "";
             return `<li><strong>Batch #${batch.batch}${batchName} — ${brewedDate}</strong>${status}<br>${batch.abv} ABV · ${batch.ibu} IBU · ${batch.ebc} EBC · OG ${batch.og} · FG ${batch.fg}</li>`;
