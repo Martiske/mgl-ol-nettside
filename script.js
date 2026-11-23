@@ -121,8 +121,8 @@ const beerPhotos = {
         { file: "AleBuzz Humlesnurr glass.jpeg", caption: "Glass" }
     ],
     "Bösebrücke Berliner Weisse": [
-        { file: "Bösebrücke glass label.jpeg", caption: "Glass og etikett" },
-        { file: "Bösebrücke Pet.jpeg", caption: "Flaske" }
+        { file: "Bosebrucke glass label.jpeg", caption: "Glass og etikett" },
+        { file: "Bosebrucke Pet.jpeg", caption: "Flaske" }
     ],
     "Mangohumle": [
         { file: "Mangohumle glass label.jpeg", caption: "Glass og etikett" }
