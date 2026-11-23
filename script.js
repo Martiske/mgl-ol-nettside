@@ -1,6 +1,6 @@
 const manualMatches = {
     "Rett i Vranga Premium": "Rett i Vranga.jpg",
-    "Tina 40 - Rett i Vranga": "Tina 40 Rett i Vranga.jpg",
+    "Rett i Vranga": "Tina 40 Rett i Vranga.jpg",
     "Pils Under Press": "Pils Under Press blue um ba.jpg",
     "Sur Flaten": "Flaten Surøl.jpg",
     "SvinPils": "SvinPils2.jpg",
@@ -41,7 +41,7 @@ const batchHistory = [
     { beer: "Märzen Good & Lovely", batch: 17, brewedOn: "2025-03-22", abv: "5.9%", ibu: 21, ebc: 24, og: "1.060", fg: "1.015" },
     { beer: "Mr. IPA", batch: 18, brewedOn: "2025-04-23", abv: "5.8%", ibu: 39, ebc: 8, og: "1.060", fg: "1.016" },
     { beer: "Rett i Vranga Premium", batch: 19, brewedOn: "2026-09-22", abv: "6.4%", ibu: 34, ebc: 7, og: "1.060", fg: "1.011" },
-    { beer: "Tina 40 - Rett i Vranga", batch: 20, brewedOn: "2026-10-05", abv: "4.9%", ibu: 34, ebc: 6, og: "1.045", fg: "1.008" },
+    { beer: "Rett i Vranga", batch: 20, brewedOn: "2026-10-05", abv: "4.9%", ibu: 34, ebc: 6, og: "1.045", fg: "1.008" },
     { beer: "Porter Salut Britain", batch: 21, brewedOn: "2026-11-11", abv: "6.4%", ibu: 33, ebc: 71, og: "1.066", fg: "1.017", status: "Kondisjonering, dag 12" }
 ];
 
@@ -133,6 +133,9 @@ const beerPhotos = {
     "Porter Salut Britain": [
         { file: "Porter salut glass.jpeg", caption: "Glass" },
         { file: "Porter salut after eight.jpeg", caption: "Servering" }
+    ],
+    "Rett i Vranga": [
+        { file: "Rett i Vranga servering.jpeg", caption: "Servering" }
     ],
     "BringeBeer": [
         { file: "Bringe Beer glass.jpeg", caption: "Glass" }
