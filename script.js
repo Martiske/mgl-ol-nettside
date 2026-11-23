@@ -1,5 +1,6 @@
 const manualMatches = {
     "Rett i Vranga Premium": "Rett i Vranga.jpg",
+    "Tina 40 - Rett i Vranga": "Tina 40 Rett i Vranga.jpg",
     "Pils Under Press": "Pils Under Press blue um ba.jpg",
     "Sur Flaten": "Flaten Surøl.jpg",
     "SvinPils": "SvinPils2.jpg",
@@ -19,6 +20,30 @@ const manualMatches = {
     "Easy Livin’ 2.0": "Easy Livin 2.0 2.jpg",
     "Tadvin Saison": "Tadvin.jpg"
 };
+
+const batchHistory = [
+    { beer: "Kveik Pale Ale 200 BPM", batch: 1, brewedOn: "2020-06-14", abv: "4.7%", ibu: 36, ebc: 13, og: "1.050", fg: "1.011" },
+    { beer: "Porter Salut Britain", batch: 2, brewedOn: "2021-06-05", abv: "4.7%", ibu: 34, ebc: 75, og: "1.051", fg: "1.015" },
+    { beer: "Pils Under Press", batch: 3, brewedOn: "2021-02-22", abv: "5.3%", ibu: 28, ebc: 8, og: "1.047", fg: "1.007", label: "Utepils" },
+    { beer: "Witty Peach", batch: 4, brewedOn: "2021-03-13", abv: "5.1%", ibu: 25, ebc: 8, og: "1.051", fg: "1.012" },
+    { beer: "Knusk IPA", batch: 5, brewedOn: "2021-03-12", abv: "8.1%", ibu: 20, ebc: 8, og: "1.061", fg: "0.999" },
+    { beer: "Porter Salut Britain", batch: 6, brewedOn: "2021-05-01", abv: "5.8%", ibu: 32, ebc: 70, og: "1.062", fg: "1.018" },
+    { beer: "Sur Flaten", batch: 7, brewedOn: "2021-06-03", abv: "5.5%", ibu: 20, ebc: 12, og: "1.051", fg: "1.009" },
+    { beer: "Witty Peach", batch: 8, brewedOn: "2021-08-25", abv: "5.5%", ibu: 26, ebc: 9, og: "1.051", fg: "1.009" },
+    { beer: "Pils Under Press", batch: 9, brewedOn: "2022-08-23", abv: "5.4%", ibu: 37, ebc: 6, og: "1.047", fg: "1.006" },
+    { beer: "Porter Salut Britain", batch: 10, brewedOn: "2022-10-13", abv: "6.2%", ibu: 32, ebc: 71, og: "1.062", fg: "1.015" },
+    { beer: "Pure Pale Ale", batch: 11, brewedOn: "2023-05-21", abv: "4.9%", ibu: 39, ebc: 16, og: "1.050", fg: "1.016" },
+    { beer: "Skeisen Weiss Wisswass Weizen-Wasser", batch: 12, brewedOn: "2023-11-07", abv: "4.1%", ibu: 12, ebc: 8, og: "1.042", fg: "1.011" },
+    { beer: "Witty Peach", batch: 13, brewedOn: "2023-11-26", abv: "5.0%", ibu: 26, ebc: 9, og: "1.047", fg: "1.009" },
+    { beer: "Pils Beer With Me", batch: 14, brewedOn: "2023-12-10", abv: "4.2%", ibu: 20, ebc: 8, og: "1.042", fg: "1.011" },
+    { beer: "Lager '76", batch: 15, brewedOn: "2024-07-04", abv: "5.1%", ibu: 19, ebc: 9, og: "1.051", fg: "1.012" },
+    { beer: "Tune Your Oud", batch: 16, brewedOn: "2024-09-22", abv: "6.2%", ibu: 21, ebc: 44, og: "1.059", fg: "1.014" },
+    { beer: "Märzen Good & Lovely", batch: 17, brewedOn: "2025-03-22", abv: "5.9%", ibu: 21, ebc: 24, og: "1.060", fg: "1.015" },
+    { beer: "Mr. IPA", batch: 18, brewedOn: "2025-04-23", abv: "5.8%", ibu: 39, ebc: 8, og: "1.060", fg: "1.016" },
+    { beer: "Rett i Vranga Premium", batch: 19, brewedOn: "2026-09-22", abv: "6.4%", ibu: 34, ebc: 7, og: "1.060", fg: "1.011" },
+    { beer: "Tina 40 - Rett i Vranga", batch: 20, brewedOn: "2026-10-05", abv: "4.9%", ibu: 34, ebc: 6, og: "1.045", fg: "1.008" },
+    { beer: "Porter Salut Britain", batch: 21, brewedOn: "2026-11-11", abv: "6.4%", ibu: 33, ebc: 71, og: "1.066", fg: "1.017", status: "Kondisjonering, dag 12" }
+];
 
 const beerPhotos = {
     "Skeisen Weiss Wisswass Weizen-Wasser": [
@@ -429,6 +454,24 @@ function openModal(beer, img) {
 
     if (beer.ingredients) {
         details += `<div><strong>Bryggedata:</strong> ${beer.ingredients}</div>`;
+    }
+
+    const beerBatches = batchHistory
+        .filter((batch) => batch.beer === beer.name)
+        .sort((a, b) => a.brewedOn.localeCompare(b.brewedOn));
+    if (beerBatches.length) {
+        const dateFormatter = new Intl.DateTimeFormat("nb-NO", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+            timeZone: "UTC"
+        });
+        details += `<h4>Batchhistorikk</h4><ol class="batch-history">${beerBatches.map((batch) => {
+            const brewedDate = dateFormatter.format(new Date(`${batch.brewedOn}T00:00:00Z`));
+            const batchName = batch.label ? ` – ${batch.label}` : "";
+            const status = batch.status ? ` <span>(${batch.status})</span>` : "";
+            return `<li><strong>Batch #${batch.batch}${batchName} — ${brewedDate}</strong>${status}<br>${batch.abv} ABV · ${batch.ibu} IBU · ${batch.ebc} EBC · OG ${batch.og} · FG ${batch.fg}</li>`;
+        }).join("")}</ol>`;
     }
 
     modalDetails.innerHTML = details;
