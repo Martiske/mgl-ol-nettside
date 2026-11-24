@@ -595,6 +595,10 @@ input {
     color: #181411;
 }
 
+#modalDetails .story-note {
+    color: #b42318;
+}
+
 #modalDetails h4 {
     margin: 18px 0 8px;
     font-size: 0.92rem;
