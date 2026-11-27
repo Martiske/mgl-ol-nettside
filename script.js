@@ -201,6 +201,46 @@ const beerPhotoGallery = document.getElementById("beerPhotoGallery");
 const modalDesc = document.getElementById("modalDesc");
 const modalDetails = document.getElementById("modalDetails");
 const closeModalBtn = document.getElementById("closeModalBtn");
+const contactForm = document.getElementById("contactForm");
+const contactStatus = document.getElementById("contactStatus");
+const formStartedAt = document.getElementById("formStartedAt");
+
+if (contactForm && formStartedAt) {
+    formStartedAt.value = String(Date.now());
+    contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const submitButton = contactForm.querySelector("button[type='submit']");
+        const formData = new FormData(contactForm);
+        const payload = Object.fromEntries(formData.entries());
+
+        submitButton.disabled = true;
+        contactStatus.textContent = "Sender meldingen …";
+        contactStatus.dataset.state = "";
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            });
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || "Meldingen kunne ikke sendes akkurat nå.");
+            }
+
+            contactForm.reset();
+            formStartedAt.value = String(Date.now());
+            contactStatus.textContent = "Takk for meldingen! Den er sendt.";
+            contactStatus.dataset.state = "success";
+        } catch (error) {
+            contactStatus.textContent = error.message || "Meldingen kunne ikke sendes akkurat nå. Prøv igjen senere.";
+            contactStatus.dataset.state = "error";
+        } finally {
+            submitButton.disabled = false;
+        }
+    });
+}
 
 let activeStyle = "";
 let activeYear = null;

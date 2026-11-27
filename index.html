@@ -24,6 +24,7 @@
     <a href="#onTap">På tap</a>
     <a href="#beers">Øl</a>
     <a href="#about">Om bryggeriet</a>
+    <a href="#contact">Kontakt</a>
 </nav>
 
 <section class="hero">
@@ -137,6 +138,50 @@ Kondisjonering og servering - Cornelius-fat 19L, Keezer bygget av fryseboks med 
 
             </div>
         </div>
+    </div>
+</section>
+
+<section id="contact" class="content-section alt">
+    <div class="section-shell">
+        <div class="section-header">
+            <p class="section-label">Ta kontakt</p>
+            <h2>Spørsmål, forespørsler eller innspill?</h2>
+            <p>Send en melding til bryggeriet. Jeg bruker opplysningene dine bare for å kunne svare på henvendelsen.</p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+            <div class="contact-form-fields">
+                <div class="form-field">
+                    <label for="contactName">Navn</label>
+                    <input id="contactName" name="name" type="text" autocomplete="name" maxlength="100" required>
+                </div>
+                <div class="form-field">
+                    <label for="contactEmail">E-post</label>
+                    <input id="contactEmail" name="email" type="email" autocomplete="email" maxlength="254" required>
+                </div>
+                <div class="form-field">
+                    <label for="contactTopic">Hva gjelder det?</label>
+                    <select id="contactTopic" name="topic" required>
+                        <option value="">Velg tema</option>
+                        <option value="Spørsmål">Spørsmål</option>
+                        <option value="Forespørsel">Forespørsel</option>
+                        <option value="Innspill">Innspill</option>
+                        <option value="Annet">Annet</option>
+                    </select>
+                </div>
+                <div class="form-field form-field-message">
+                    <label for="contactMessage">Melding</label>
+                    <textarea id="contactMessage" name="message" rows="6" maxlength="5000" required></textarea>
+                </div>
+                <div class="contact-form-trap" aria-hidden="true">
+                    <label for="contactWebsite">La dette feltet stå tomt</label>
+                    <input id="contactWebsite" name="website" type="text" tabindex="-1" autocomplete="off">
+                </div>
+                <input name="formStartedAt" type="hidden" id="formStartedAt">
+                <button class="contact-submit" type="submit">Send melding</button>
+                <p class="contact-status" id="contactStatus" role="status" aria-live="polite"></p>
+            </div>
+        </form>
     </div>
 </section>
 
