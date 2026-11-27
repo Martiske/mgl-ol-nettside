@@ -203,10 +203,8 @@ const modalDetails = document.getElementById("modalDetails");
 const closeModalBtn = document.getElementById("closeModalBtn");
 const contactForm = document.getElementById("contactForm");
 const contactStatus = document.getElementById("contactStatus");
-const formStartedAt = document.getElementById("formStartedAt");
 
-if (contactForm && formStartedAt) {
-    formStartedAt.value = String(Date.now());
+if (contactForm) {
     contactForm.addEventListener("submit", async (event) => {
         event.preventDefault();
         const submitButton = contactForm.querySelector("button[type='submit']");
@@ -218,19 +216,27 @@ if (contactForm && formStartedAt) {
         contactStatus.dataset.state = "";
 
         try {
-            const response = await fetch("/api/contact", {
+            const response = await fetch(contactForm.action, {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
                 body: JSON.stringify(payload)
             });
-            const result = await response.json();
+            let result = {};
+            try {
+                result = await response.json();
+            } catch {
+                // Keep the user-facing message useful if the service returns no JSON.
+            }
 
             if (!response.ok) {
-                throw new Error(result.error || "Meldingen kunne ikke sendes akkurat nå.");
+                const serviceMessage = result.errors?.map((item) => item.message).filter(Boolean).join(" ");
+                throw new Error(serviceMessage || result.error || "Meldingen kunne ikke sendes akkurat nå.");
             }
 
             contactForm.reset();
-            formStartedAt.value = String(Date.now());
             contactStatus.textContent = "Takk for meldingen! Den er sendt.";
             contactStatus.dataset.state = "success";
         } catch (error) {

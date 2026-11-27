@@ -149,7 +149,7 @@ Kondisjonering og servering - Cornelius-fat 19L, Keezer bygget av fryseboks med 
             <p>Send en melding til bryggeriet. Jeg bruker opplysningene dine bare for å kunne svare på henvendelsen.</p>
         </div>
 
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/mdegvkqw" method="POST">
             <div class="contact-form-fields">
                 <div class="form-field">
                     <label for="contactName">Navn</label>
@@ -175,9 +175,8 @@ Kondisjonering og servering - Cornelius-fat 19L, Keezer bygget av fryseboks med 
                 </div>
                 <div class="contact-form-trap" aria-hidden="true">
                     <label for="contactWebsite">La dette feltet stå tomt</label>
-                    <input id="contactWebsite" name="website" type="text" tabindex="-1" autocomplete="off">
+                    <input id="contactWebsite" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
                 </div>
-                <input name="formStartedAt" type="hidden" id="formStartedAt">
                 <button class="contact-submit" type="submit">Send melding</button>
                 <p class="contact-status" id="contactStatus" role="status" aria-live="polite"></p>
             </div>
