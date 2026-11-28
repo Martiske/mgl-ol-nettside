@@ -844,4 +844,12 @@ textarea {
     .modal {
         padding: 16px;
     }
+
+    .modal-content .close {
+        position: sticky;
+        top: 0;
+        display: block;
+        z-index: 2;
+        margin: -8px -8px -42px auto;
+    }
 }
