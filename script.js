@@ -55,6 +55,9 @@ const batchHistory = [
 ];
 
 const beerPhotos = {
+    "Stim Lager": [
+        { file: "Steam Lager glass.JPG", caption: "Glass og flaske" }
+    ],
     "Skeisen Weiss Wisswass Weizen-Wasser": [
         { file: "Skeisen Weiss Wisswass Weizen-Wasser glass.jpeg", caption: "Glass" }
     ],
