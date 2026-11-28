@@ -123,9 +123,13 @@ const beerPhotos = {
         { file: "Funky flaten glass label.jpeg", caption: "Glass og etikett" }
     ],
     "Witty Peach": [
+        { file: "Witty Peach brygging.JPG", caption: "Brygging av Witty Peach" },
         { file: "Witty peach glass.jpeg", caption: "Glass" },
         { file: "Witty peach long glass.jpeg", caption: "Høyt glass" },
         { file: "Witty peach tap.jpeg", caption: "På tap" }
+    ],
+    "Julegeit": [
+        { file: "Julegeit glass og etikett 2017.JPG", caption: "Glass og etikett, 2017" }
     ],
     "The Kid with Red Ale": [
         { file: "The kid with red ale glass lable.jpeg", caption: "Glass og etikett" }
