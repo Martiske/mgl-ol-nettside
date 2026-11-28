@@ -31,6 +31,7 @@ const manualMatches = {
 };
 
 const batchHistory = [
+    { beer: "Witty Peach", brewedOn: "2017-05", photos: [{ file: "Witty Peach mai 2017.JPG", caption: "Servering, mai 2017" }] },
     { beer: "Kveik Pale Ale 200 BPM", batch: 1, brewedOn: "2020-06-14", abv: "4.7%", ibu: 36, ebc: 13, og: "1.050", fg: "1.011" },
     { beer: "Porter Salut Britain", batch: 2, brewedOn: "2021-06-05", abv: "4.7%", ibu: 34, ebc: 75, og: "1.051", fg: "1.015" },
     { beer: "Pils Under Press", batch: 3, brewedOn: "2021-02-22", abv: "5.3%", ibu: 28, ebc: 8, og: "1.047", fg: "1.007", label: "Utepils" },
@@ -291,12 +292,14 @@ function findImage(beerName) {
 }
 
 function formatBrewDate(dateString) {
+    const dateToFormat = /^\d{4}-\d{2}$/.test(dateString) ? `${dateString}-01` : dateString;
+    const options = /^\d{4}-\d{2}$/.test(dateString)
+        ? { month: "long", year: "numeric", timeZone: "UTC" }
+        : { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" };
+
     return new Intl.DateTimeFormat("nb-NO", {
-        day: "numeric",
-        month: "long",
-        year: "numeric",
-        timeZone: "UTC"
-    }).format(new Date(`${dateString}T00:00:00Z`));
+        ...options
+    }).format(new Date(`${dateToFormat}T00:00:00Z`));
 }
 
 function photoPath(fileName) {
@@ -304,7 +307,10 @@ function photoPath(fileName) {
 }
 
 function renderBeerPhotos(beer) {
-    const photos = beerPhotos[beer.name] || [];
+    const photos = [
+        ...(beer.batchRecord?.photos || []),
+        ...(beerPhotos[beer.name] || [])
+    ];
     beerPhotoGallery.innerHTML = "";
     beerPhotoGallery.hidden = photos.length === 0;
 
@@ -533,8 +539,16 @@ function openModal(beer, img) {
     let details;
     if (beer.batchRecord) {
         const batch = beer.batchRecord;
-        details = `<p><strong>Brygget</strong> <span class="modal-year" data-year="${beer.year}">${formatBrewDate(batch.brewedOn)}</span> · Brewfather batch #${batch.batch}</p>`;
-        details += `<p>ABV: ${batch.abv} | IBU: ${batch.ibu} | EBC: ${batch.ebc} | OG: ${batch.og} | FG: ${batch.fg}</p>`;
+        const brewfatherBatch = batch.batch ? ` · Brewfather batch #${batch.batch}` : "";
+        details = `<p><strong>Brygget</strong> <span class="modal-year" data-year="${beer.year}">${formatBrewDate(batch.brewedOn)}</span>${brewfatherBatch}</p>`;
+        const batchStats = [
+            batch.abv && `ABV: ${batch.abv}`,
+            batch.ibu && `IBU: ${batch.ibu}`,
+            batch.ebc && `EBC: ${batch.ebc}`,
+            batch.og && `OG: ${batch.og}`,
+            batch.fg && `FG: ${batch.fg}`
+        ].filter(Boolean);
+        if (batchStats.length) details += `<p>${batchStats.join(" | ")}</p>`;
         if (batch.status) details += `<p>Status: ${batch.status}</p>`;
     } else {
         details = `<p>Brygget: <span class="modal-year" data-year="${beer.year}">${beer.year}</span>`;
@@ -562,9 +576,17 @@ function openModal(beer, img) {
     if (beerBatches.length) {
         details += `<h4>Batchhistorikk</h4><ol class="batch-history">${beerBatches.map((batch) => {
             const brewedDate = formatBrewDate(batch.brewedOn);
-            const batchName = batch.label ? ` – ${batch.label}` : "";
+            const batchName = batch.batch ? ` — Brewfather batch #${batch.batch}` : batch.label ? ` — ${batch.label}` : "";
             const status = batch.status ? ` <span>(${batch.status})</span>` : "";
-            return `<li><strong>${brewedDate} — Brewfather batch #${batch.batch}${batchName}</strong>${status}<br>${batch.abv} ABV · ${batch.ibu} IBU · ${batch.ebc} EBC · OG ${batch.og} · FG ${batch.fg}</li>`;
+            const batchStats = [
+                batch.abv && `${batch.abv} ABV`,
+                batch.ibu && `${batch.ibu} IBU`,
+                batch.ebc && `${batch.ebc} EBC`,
+                batch.og && `OG ${batch.og}`,
+                batch.fg && `FG ${batch.fg}`
+            ].filter(Boolean);
+            const statsMarkup = batchStats.length ? `<br>${batchStats.join(" · ")}` : "";
+            return `<li><strong>${brewedDate}${batchName}</strong>${status}${statsMarkup}</li>`;
         }).join("")}</ol>`;
     }
 
