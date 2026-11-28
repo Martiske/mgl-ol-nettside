@@ -132,7 +132,7 @@ const beerPhotos = {
         { file: "Julegeit glass og etikett 2017.JPG", caption: "Glass og etikett, 2017" }
     ],
     "Cerveza Rapido Vamos": [
-        { file: "Cerveza Rapido Vamos Jar Jazzfestival.png", caption: "Jar Jazzfestival" }
+        { file: "Cerveza Rapido Vamos Jar Jazzfestival.jpg", caption: "Jar Jazzfestival" }
     ],
     "The Kid with Red Ale": [
         { file: "The kid with red ale glass lable.jpeg", caption: "Glass og etikett" }
